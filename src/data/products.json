@@ -1,0 +1,893 @@
+[
+  {
+    "id": "p1",
+    "title": "九成新 iPad Air 5 64G",
+    "price": 2899,
+    "originalPrice": 4799,
+    "category": "数码电子",
+    "gradient": [
+      "#667eea",
+      "#764ba2"
+    ],
+    "accent": "#f093fb",
+    "emoji": "📱",
+    "tag": "苹果生态",
+    "matchScore": 98,
+    "matchFactor": "基于浏览/收藏偏好",
+    "description": "毕业季闲置，用了不到半年，成色9成新，原装充电器都在，欢迎小刀。",
+    "sellerId": "u3",
+    "condition": "9成新",
+    "location": "浙江大学",
+    "views": 234,
+    "likes": 56,
+    "publishedAt": "2024-06-10",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p1%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23667eea%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23764ba2%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p1%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p1)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23f093fb%22%20text-anchor%3D%22middle%22%3E%E8%8B%B9%E6%9E%9C%E7%94%9F%E6%80%81%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23f093fb%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E40%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%93%B1%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p1)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E4%B9%9D%E6%88%90%E6%96%B0%20iPad%20Air...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23764ba2%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23f093fb%22%20text-anchor%3D%22middle%22%3E%E6%95%B0%E7%A0%81%E7%94%B5%E5%AD%90%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A54799%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A52899%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p1)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E98%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 5,
+        "content": "东西很新，卖家也很负责！物流超快，下次还会再来～",
+        "likes": 12,
+        "createdAt": "2024-06-15"
+      },
+      {
+        "id": "c2",
+        "userId": "u3",
+        "userName": "王同学",
+        "rating": 4,
+        "content": "性价比不错，推荐！成色和描述基本一致。",
+        "likes": 5,
+        "createdAt": "2024-06-10"
+      },
+      {
+        "id": "c3",
+        "userId": "u4",
+        "userName": "赵同学",
+        "rating": 5,
+        "content": "非常满意！卖家态度很好，当面验货很放心。",
+        "likes": 8,
+        "createdAt": "2024-06-08"
+      }
+    ]
+  },
+  {
+    "id": "p2",
+    "title": "高等数学教材 同济七版",
+    "price": 15,
+    "originalPrice": 45,
+    "category": "教材书籍",
+    "gradient": [
+      "#f6d365",
+      "#fda085"
+    ],
+    "accent": "#ff8a00",
+    "emoji": "📚",
+    "tag": "新生必备",
+    "matchScore": 95,
+    "matchFactor": "基于专业匹配 + 新生画像",
+    "description": "少量笔记，整体品相好，适合大一新生预习高数。",
+    "sellerId": "u2",
+    "condition": "8成新",
+    "location": "北京大学",
+    "views": 189,
+    "likes": 42,
+    "publishedAt": "2024-06-12",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p2%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23f6d365%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23fda085%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p2%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p2)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23ff8a00%22%20text-anchor%3D%22middle%22%3E%E6%96%B0%E7%94%9F%E5%BF%85%E5%A4%87%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23ff8a00%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E67%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%93%9A%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p2)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E6%95%99%E6%9D%90%20%E5%90%8C%E6%B5%8E%E4%B8%83%E7%89%88%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23fda085%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23ff8a00%22%20text-anchor%3D%22middle%22%3E%E6%95%99%E6%9D%90%E4%B9%A6%E7%B1%8D%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A545%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A515%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p2)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E95%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u1",
+        "userName": "张同学",
+        "rating": 5,
+        "content": "笔记很详细，帮到我了，感谢！",
+        "likes": 15,
+        "createdAt": "2024-06-14"
+      },
+      {
+        "id": "c2",
+        "userId": "u5",
+        "userName": "孙同学",
+        "rating": 4,
+        "content": "书本保存得很好，几乎全新。",
+        "likes": 7,
+        "createdAt": "2024-06-12"
+      }
+    ]
+  },
+  {
+    "id": "p3",
+    "title": "小米电动滑板车 1S",
+    "price": 1299,
+    "originalPrice": 2199,
+    "category": "出行工具",
+    "gradient": [
+      "#fa709a",
+      "#fee140"
+    ],
+    "accent": "#ff4e50",
+    "emoji": "🛴",
+    "tag": "校园代步",
+    "matchScore": 92,
+    "matchFactor": "基于距离优先推荐 · 同校区",
+    "description": "校园代步神器，续航20公里，附带原装充电器，诚心出。",
+    "sellerId": "u5",
+    "condition": "8成新",
+    "location": "上海交通大学",
+    "views": 312,
+    "likes": 78,
+    "publishedAt": "2024-06-08",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p3%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23fa709a%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23fee140%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p3%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p3)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E%E6%A0%A1%E5%9B%AD%E4%BB%A3%E6%AD%A5%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23ff4e50%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E41%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%9B%B4%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p3)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E5%B0%8F%E7%B1%B3%E7%94%B5%E5%8A%A8%E6%BB%91%E6%9D%BF%E8%BD%A6%201S%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23fee140%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E%E5%87%BA%E8%A1%8C%E5%B7%A5%E5%85%B7%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A52199%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A51299%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p3)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E92%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 5,
+        "content": "代步神器，骑了一周感觉很不错！",
+        "likes": 20,
+        "createdAt": "2024-06-16"
+      },
+      {
+        "id": "c2",
+        "userId": "u3",
+        "userName": "王同学",
+        "rating": 5,
+        "content": "校园内交易很方便，性能杠杠的。",
+        "likes": 11,
+        "createdAt": "2024-06-11"
+      },
+      {
+        "id": "c3",
+        "userId": "u1",
+        "userName": "张同学",
+        "rating": 4,
+        "content": "整体不错，性价比高！",
+        "likes": 3,
+        "createdAt": "2024-06-09"
+      }
+    ]
+  },
+  {
+    "id": "p4",
+    "title": "Nike Air Zoom 跑鞋",
+    "price": 399,
+    "originalPrice": 899,
+    "category": "运动户外",
+    "gradient": [
+      "#f093fb",
+      "#f5576c"
+    ],
+    "accent": "#fff1eb",
+    "emoji": "👟",
+    "tag": "运动装备",
+    "matchScore": 88,
+    "matchFactor": "基于浏览偏好 + 运动画像",
+    "description": "42码，只穿过几次，鞋盒都在，成色完美。",
+    "sellerId": "u5",
+    "condition": "9成新",
+    "location": "上海交通大学",
+    "views": 145,
+    "likes": 31,
+    "publishedAt": "2024-06-11",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p4%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23f093fb%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23f5576c%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p4%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p4)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23fff1eb%22%20text-anchor%3D%22middle%22%3E%E8%BF%90%E5%8A%A8%E8%A3%85%E5%A4%87%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23fff1eb%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E56%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%91%9F%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p4)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3ENike%20Air%20Zoo...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23f5576c%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23fff1eb%22%20text-anchor%3D%22middle%22%3E%E8%BF%90%E5%8A%A8%E6%88%B7%E5%A4%96%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5899%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A5399%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p4)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E88%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u4",
+        "userName": "赵同学",
+        "rating": 5,
+        "content": "码数合适，几乎全新，太值了！",
+        "likes": 9,
+        "createdAt": "2024-06-13"
+      },
+      {
+        "id": "c2",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 4,
+        "content": "穿着舒服，推荐购买～",
+        "likes": 6,
+        "createdAt": "2024-06-07"
+      }
+    ]
+  },
+  {
+    "id": "p5",
+    "title": "MacBook Pro 14 寸 M1 Pro",
+    "price": 6800,
+    "originalPrice": 14999,
+    "category": "数码电子",
+    "gradient": [
+      "#4facfe",
+      "#00f2fe"
+    ],
+    "accent": "#2d1b69",
+    "emoji": "💻",
+    "tag": "程序员利器",
+    "matchScore": 96,
+    "matchFactor": "基于专业/收藏偏好",
+    "description": "16G+512G，深空灰，程序员毕业闲置，性能无任何问题。",
+    "sellerId": "u3",
+    "condition": "9成新",
+    "location": "浙江大学",
+    "views": 567,
+    "likes": 123,
+    "publishedAt": "2024-06-05",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p5%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%234facfe%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%2300f2fe%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p5%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p5)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%232d1b69%22%20text-anchor%3D%22middle%22%3E%E7%A8%8B%E5%BA%8F%E5%91%98%E5%88%A9%E5%99%A8%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%232d1b69%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E55%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%92%BB%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p5)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3EMacBook%20Pro%20...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%2300f2fe%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%232d1b69%22%20text-anchor%3D%22middle%22%3E%E6%95%B0%E7%A0%81%E7%94%B5%E5%AD%90%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A514999%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A56800%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p5)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E96%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 5,
+        "content": "东西很新，卖家也很负责！物流超快，下次还会再来～",
+        "likes": 12,
+        "createdAt": "2024-06-15"
+      },
+      {
+        "id": "c2",
+        "userId": "u3",
+        "userName": "王同学",
+        "rating": 4,
+        "content": "性价比不错，推荐！成色和描述基本一致。",
+        "likes": 5,
+        "createdAt": "2024-06-10"
+      },
+      {
+        "id": "c3",
+        "userId": "u4",
+        "userName": "赵同学",
+        "rating": 5,
+        "content": "非常满意！卖家态度很好，当面验货很放心。",
+        "likes": 8,
+        "createdAt": "2024-06-08"
+      }
+    ]
+  },
+  {
+    "id": "p6",
+    "title": "宿舍学习桌椅套装",
+    "price": 120,
+    "originalPrice": 399,
+    "category": "生活用品",
+    "gradient": [
+      "#fccb90",
+      "#d57eeb"
+    ],
+    "accent": "#ffffff",
+    "emoji": "🪑",
+    "tag": "宿舍好物",
+    "matchScore": 85,
+    "matchFactor": "基于新生偏好推荐",
+    "description": "毕业清仓，自提，宿舍必备，结实耐用。桌椅组合打包出。",
+    "sellerId": "u4",
+    "condition": "7成新",
+    "location": "复旦大学",
+    "views": 98,
+    "likes": 22,
+    "publishedAt": "2024-06-14",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p6%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23fccb90%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23d57eeb%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p6%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p6)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3E%E5%AE%BF%E8%88%8D%E5%A5%BD%E7%89%A9%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E70%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%AA%91%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p6)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E5%AE%BF%E8%88%8D%E5%AD%A6%E4%B9%A0%E6%A1%8C%E6%A4%85%E5%A5%97%E8%A3%85%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23d57eeb%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3E%E7%94%9F%E6%B4%BB%E7%94%A8%E5%93%81%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5399%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A5120%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p6)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E85%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u1",
+        "userName": "张同学",
+        "rating": 5,
+        "content": "笔记很详细，帮到我了，感谢！",
+        "likes": 15,
+        "createdAt": "2024-06-14"
+      },
+      {
+        "id": "c2",
+        "userId": "u5",
+        "userName": "孙同学",
+        "rating": 4,
+        "content": "书本保存得很好，几乎全新。",
+        "likes": 7,
+        "createdAt": "2024-06-12"
+      }
+    ]
+  },
+  {
+    "id": "p7",
+    "title": "Kindle Paperwhite 11 代",
+    "price": 499,
+    "originalPrice": 998,
+    "category": "数码电子",
+    "gradient": [
+      "#a8edea",
+      "#fed6e3"
+    ],
+    "accent": "#ff758c",
+    "emoji": "📖",
+    "tag": "读书神器",
+    "matchScore": 91,
+    "matchFactor": "基于阅读偏好推荐",
+    "description": "32G，无划痕，电池健康度98%，看书神器。",
+    "sellerId": "u2",
+    "condition": "9成新",
+    "location": "北京大学",
+    "views": 178,
+    "likes": 45,
+    "publishedAt": "2024-06-09",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p7%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23a8edea%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23fed6e3%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p7%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p7)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23ff758c%22%20text-anchor%3D%22middle%22%3E%E8%AF%BB%E4%B9%A6%E7%A5%9E%E5%99%A8%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23ff758c%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E50%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%93%96%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p7)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3EKindle%20Paper...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23fed6e3%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23ff758c%22%20text-anchor%3D%22middle%22%3E%E6%95%B0%E7%A0%81%E7%94%B5%E5%AD%90%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5998%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A5499%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p7)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E91%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 5,
+        "content": "代步神器，骑了一周感觉很不错！",
+        "likes": 20,
+        "createdAt": "2024-06-16"
+      },
+      {
+        "id": "c2",
+        "userId": "u3",
+        "userName": "王同学",
+        "rating": 5,
+        "content": "校园内交易很方便，性能杠杠的。",
+        "likes": 11,
+        "createdAt": "2024-06-11"
+      },
+      {
+        "id": "c3",
+        "userId": "u1",
+        "userName": "张同学",
+        "rating": 4,
+        "content": "整体不错，性价比高！",
+        "likes": 3,
+        "createdAt": "2024-06-09"
+      }
+    ]
+  },
+  {
+    "id": "p8",
+    "title": "毕业礼服学士服 女款",
+    "price": 88,
+    "originalPrice": 299,
+    "category": "服装配饰",
+    "gradient": [
+      "#ff9a9e",
+      "#fecfef"
+    ],
+    "accent": "#d8247c",
+    "emoji": "🎓",
+    "tag": "毕业季限定",
+    "matchScore": 82,
+    "matchFactor": "基于毕业季推荐",
+    "description": "拍照仅穿一次，M 码，附带领结、校徽装饰。",
+    "sellerId": "u4",
+    "condition": "全新",
+    "location": "复旦大学",
+    "views": 256,
+    "likes": 67,
+    "publishedAt": "2024-06-13",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p8%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23ff9a9e%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23fecfef%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p8%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p8)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23d8247c%22%20text-anchor%3D%22middle%22%3E%E6%AF%95%E4%B8%9A%E5%AD%A3%E9%99%90%E5%AE%9A%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23d8247c%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E71%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%8E%93%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p8)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E6%AF%95%E4%B8%9A%E7%A4%BC%E6%9C%8D%E5%AD%A6%E5%A3%AB%E6%9C%8D%20%E5%A5%B3%E6%AC%BE%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23fecfef%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23d8247c%22%20text-anchor%3D%22middle%22%3E%E6%9C%8D%E8%A3%85%E9%85%8D%E9%A5%B0%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5299%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A588%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p8)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E82%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u4",
+        "userName": "赵同学",
+        "rating": 5,
+        "content": "码数合适，几乎全新，太值了！",
+        "likes": 9,
+        "createdAt": "2024-06-13"
+      },
+      {
+        "id": "c2",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 4,
+        "content": "穿着舒服，推荐购买～",
+        "likes": 6,
+        "createdAt": "2024-06-07"
+      }
+    ]
+  },
+  {
+    "id": "p9",
+    "title": "AirPods Pro 2 二代",
+    "price": 999,
+    "originalPrice": 1899,
+    "category": "数码电子",
+    "gradient": [
+      "#e0eafc",
+      "#cfdef3"
+    ],
+    "accent": "#434343",
+    "emoji": "🎧",
+    "tag": "降噪神器",
+    "matchScore": 97,
+    "matchFactor": "基于数码偏好 + 搜索关键词",
+    "description": "使用半年，功能完好，降噪效果绝绝子，充电线全新。",
+    "sellerId": "u1",
+    "condition": "9成新",
+    "location": "清华大学",
+    "views": 445,
+    "likes": 98,
+    "publishedAt": "2024-06-07",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p9%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23e0eafc%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23cfdef3%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p9%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p9)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23434343%22%20text-anchor%3D%22middle%22%3E%E9%99%8D%E5%99%AA%E7%A5%9E%E5%99%A8%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23434343%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E47%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%8E%A7%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p9)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3EAirPods%20Pro%20...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23cfdef3%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23434343%22%20text-anchor%3D%22middle%22%3E%E6%95%B0%E7%A0%81%E7%94%B5%E5%AD%90%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A51899%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A5999%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p9)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E97%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 5,
+        "content": "东西很新，卖家也很负责！物流超快，下次还会再来～",
+        "likes": 12,
+        "createdAt": "2024-06-15"
+      },
+      {
+        "id": "c2",
+        "userId": "u3",
+        "userName": "王同学",
+        "rating": 4,
+        "content": "性价比不错，推荐！成色和描述基本一致。",
+        "likes": 5,
+        "createdAt": "2024-06-10"
+      },
+      {
+        "id": "c3",
+        "userId": "u4",
+        "userName": "赵同学",
+        "rating": 5,
+        "content": "非常满意！卖家态度很好，当面验货很放心。",
+        "likes": 8,
+        "createdAt": "2024-06-08"
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "title": "英语四六级真题资料 全套",
+    "price": 20,
+    "originalPrice": 68,
+    "category": "教材书籍",
+    "gradient": [
+      "#84fab0",
+      "#8fd3f4"
+    ],
+    "accent": "#11998e",
+    "emoji": "📝",
+    "tag": "考证必备",
+    "matchScore": 90,
+    "matchFactor": "基于学习偏好 + 专业画像",
+    "description": "含近十年真题+答案解析，助你四六级一次通过。",
+    "sellerId": "u1",
+    "condition": "9成新",
+    "location": "清华大学",
+    "views": 267,
+    "likes": 89,
+    "publishedAt": "2024-06-06",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p10%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%2384fab0%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%238fd3f4%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p10%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p10)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%2311998e%22%20text-anchor%3D%22middle%22%3E%E8%80%83%E8%AF%81%E5%BF%85%E5%A4%87%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%2311998e%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E71%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%93%9D%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p10)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E8%8B%B1%E8%AF%AD%E5%9B%9B%E5%85%AD%E7%BA%A7%E7%9C%9F%E9%A2%98%E8%B5%84%E6%96%99%20%E5%85%A8%E5%A5%97%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%238fd3f4%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%2311998e%22%20text-anchor%3D%22middle%22%3E%E6%95%99%E6%9D%90%E4%B9%A6%E7%B1%8D%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A568%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A520%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p10)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E90%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u1",
+        "userName": "张同学",
+        "rating": 5,
+        "content": "笔记很详细，帮到我了，感谢！",
+        "likes": 15,
+        "createdAt": "2024-06-14"
+      },
+      {
+        "id": "c2",
+        "userId": "u5",
+        "userName": "孙同学",
+        "rating": 4,
+        "content": "书本保存得很好，几乎全新。",
+        "likes": 7,
+        "createdAt": "2024-06-12"
+      }
+    ]
+  },
+  {
+    "id": "p11",
+    "title": "Giant ATX 山地自行车",
+    "price": 599,
+    "originalPrice": 1599,
+    "category": "出行工具",
+    "gradient": [
+      "#43e97b",
+      "#38f9d7"
+    ],
+    "accent": "#0b486b",
+    "emoji": "🚲",
+    "tag": "通勤出行",
+    "matchScore": 86,
+    "matchFactor": "基于户外偏好 + 距离匹配",
+    "description": "骑行约3000公里，保养良好，26寸，适合校园通勤。",
+    "sellerId": "u5",
+    "condition": "8成新",
+    "location": "上海交通大学",
+    "views": 189,
+    "likes": 43,
+    "publishedAt": "2024-06-11",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p11%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%2343e97b%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%2338f9d7%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p11%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p11)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%230b486b%22%20text-anchor%3D%22middle%22%3E%E9%80%9A%E5%8B%A4%E5%87%BA%E8%A1%8C%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%230b486b%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E63%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%9A%B2%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p11)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3EGiant%20ATX%20%E5%B1%B1%E5%9C%B0...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%2338f9d7%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%230b486b%22%20text-anchor%3D%22middle%22%3E%E5%87%BA%E8%A1%8C%E5%B7%A5%E5%85%B7%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A51599%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A5599%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p11)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E86%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 5,
+        "content": "代步神器，骑了一周感觉很不错！",
+        "likes": 20,
+        "createdAt": "2024-06-16"
+      },
+      {
+        "id": "c2",
+        "userId": "u3",
+        "userName": "王同学",
+        "rating": 5,
+        "content": "校园内交易很方便，性能杠杠的。",
+        "likes": 11,
+        "createdAt": "2024-06-11"
+      },
+      {
+        "id": "c3",
+        "userId": "u1",
+        "userName": "张同学",
+        "rating": 4,
+        "content": "整体不错，性价比高！",
+        "likes": 3,
+        "createdAt": "2024-06-09"
+      }
+    ]
+  },
+  {
+    "id": "p12",
+    "title": "罗技 MX Master 3S 鼠标",
+    "price": 499,
+    "originalPrice": 899,
+    "category": "数码电子",
+    "gradient": [
+      "#2af598",
+      "#009efd"
+    ],
+    "accent": "#093028",
+    "emoji": "🖱️",
+    "tag": "生产力工具",
+    "matchScore": 93,
+    "matchFactor": "基于程序员画像推荐",
+    "description": "编程神器，人体工学设计，使用3个月，几乎全新。",
+    "sellerId": "u3",
+    "condition": "9成新",
+    "location": "浙江大学",
+    "views": 201,
+    "likes": 54,
+    "publishedAt": "2024-06-10",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p12%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%232af598%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23009efd%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p12%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p12)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23093028%22%20text-anchor%3D%22middle%22%3E%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E5%85%B7%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23093028%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E44%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%96%B1%EF%B8%8F%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p12)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E7%BD%97%E6%8A%80%20MX%20Master...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23009efd%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23093028%22%20text-anchor%3D%22middle%22%3E%E6%95%B0%E7%A0%81%E7%94%B5%E5%AD%90%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5899%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A5499%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p12)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E93%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u4",
+        "userName": "赵同学",
+        "rating": 5,
+        "content": "码数合适，几乎全新，太值了！",
+        "likes": 9,
+        "createdAt": "2024-06-13"
+      },
+      {
+        "id": "c2",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 4,
+        "content": "穿着舒服，推荐购买～",
+        "likes": 6,
+        "createdAt": "2024-06-07"
+      }
+    ]
+  },
+  {
+    "id": "p13",
+    "title": "雅马哈 F310 民谣吉他",
+    "price": 450,
+    "originalPrice": 899,
+    "category": "运动户外",
+    "gradient": [
+      "#fcb69f",
+      "#ffecd2"
+    ],
+    "accent": "#8b5a2b",
+    "emoji": "🎸",
+    "tag": "兴趣爱好",
+    "matchScore": 84,
+    "matchFactor": "基于兴趣画像推荐",
+    "description": "41寸，原木色，弦距舒适，适合新手练习。",
+    "sellerId": "u4",
+    "condition": "8成新",
+    "location": "复旦大学",
+    "views": 156,
+    "likes": 38,
+    "publishedAt": "2024-06-04",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p13%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23fcb69f%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23ffecd2%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p13%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p13)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%238b5a2b%22%20text-anchor%3D%22middle%22%3E%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%238b5a2b%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E50%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%8E%B8%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p13)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E9%9B%85%E9%A9%AC%E5%93%88%20F310%20%E6%B0%91%E8%B0%A3%E5%90%89...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23ffecd2%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%238b5a2b%22%20text-anchor%3D%22middle%22%3E%E8%BF%90%E5%8A%A8%E6%88%B7%E5%A4%96%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5899%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A5450%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p13)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E84%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 5,
+        "content": "东西很新，卖家也很负责！物流超快，下次还会再来～",
+        "likes": 12,
+        "createdAt": "2024-06-15"
+      },
+      {
+        "id": "c2",
+        "userId": "u3",
+        "userName": "王同学",
+        "rating": 4,
+        "content": "性价比不错，推荐！成色和描述基本一致。",
+        "likes": 5,
+        "createdAt": "2024-06-10"
+      },
+      {
+        "id": "c3",
+        "userId": "u4",
+        "userName": "赵同学",
+        "rating": 5,
+        "content": "非常满意！卖家态度很好，当面验货很放心。",
+        "likes": 8,
+        "createdAt": "2024-06-08"
+      }
+    ]
+  },
+  {
+    "id": "p14",
+    "title": "小米 5L 迷你电热水壶",
+    "price": 49,
+    "originalPrice": 99,
+    "category": "生活用品",
+    "gradient": [
+      "#ffecd2",
+      "#fcb69f"
+    ],
+    "accent": "#ff6a00",
+    "emoji": "🫖",
+    "tag": "宿舍小家电",
+    "matchScore": 80,
+    "matchFactor": "基于新生宿舍画像",
+    "description": "宿舍神器，烧水壶小巧不占空间，毕业出清。",
+    "sellerId": "u2",
+    "condition": "9成新",
+    "location": "北京大学",
+    "views": 112,
+    "likes": 25,
+    "publishedAt": "2024-06-15",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p14%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23ffecd2%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23fcb69f%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p14%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p14)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23ff6a00%22%20text-anchor%3D%22middle%22%3E%E5%AE%BF%E8%88%8D%E5%B0%8F%E5%AE%B6%E7%94%B5%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23ff6a00%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E51%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%AB%96%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p14)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E5%B0%8F%E7%B1%B3%205L%20%E8%BF%B7%E4%BD%A0%E7%94%B5%E7%83%AD%E6%B0%B4%E5%A3%B6%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23fcb69f%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23ff6a00%22%20text-anchor%3D%22middle%22%3E%E7%94%9F%E6%B4%BB%E7%94%A8%E5%93%81%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A599%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A549%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p14)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E80%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u1",
+        "userName": "张同学",
+        "rating": 5,
+        "content": "笔记很详细，帮到我了，感谢！",
+        "likes": 15,
+        "createdAt": "2024-06-14"
+      },
+      {
+        "id": "c2",
+        "userId": "u5",
+        "userName": "孙同学",
+        "rating": 4,
+        "content": "书本保存得很好，几乎全新。",
+        "likes": 7,
+        "createdAt": "2024-06-12"
+      }
+    ]
+  },
+  {
+    "id": "p15",
+    "title": "机械键盘 Cherry 红轴 87键",
+    "price": 288,
+    "originalPrice": 599,
+    "category": "数码电子",
+    "gradient": [
+      "#667eea",
+      "#764ba2"
+    ],
+    "accent": "#ffdd00",
+    "emoji": "⌨️",
+    "tag": "极客装备",
+    "matchScore": 94,
+    "matchFactor": "基于程序员/游戏画像",
+    "description": "使用一年，红轴，手感极佳，PBT键帽不打油。",
+    "sellerId": "u3",
+    "condition": "9成新",
+    "location": "浙江大学",
+    "views": 289,
+    "likes": 61,
+    "publishedAt": "2024-06-03",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p15%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23667eea%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23764ba2%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p15%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p15)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23ffdd00%22%20text-anchor%3D%22middle%22%3E%E6%9E%81%E5%AE%A2%E8%A3%85%E5%A4%87%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23ffdd00%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E52%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%E2%8C%A8%EF%B8%8F%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p15)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%20Cherry%20...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23764ba2%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23ffdd00%22%20text-anchor%3D%22middle%22%3E%E6%95%B0%E7%A0%81%E7%94%B5%E5%AD%90%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5599%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A5288%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p15)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E94%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 5,
+        "content": "代步神器，骑了一周感觉很不错！",
+        "likes": 20,
+        "createdAt": "2024-06-16"
+      },
+      {
+        "id": "c2",
+        "userId": "u3",
+        "userName": "王同学",
+        "rating": 5,
+        "content": "校园内交易很方便，性能杠杠的。",
+        "likes": 11,
+        "createdAt": "2024-06-11"
+      },
+      {
+        "id": "c3",
+        "userId": "u1",
+        "userName": "张同学",
+        "rating": 4,
+        "content": "整体不错，性价比高！",
+        "likes": 3,
+        "createdAt": "2024-06-09"
+      }
+    ]
+  },
+  {
+    "id": "p16",
+    "title": "健身瑜伽垫 + 弹力带套装",
+    "price": 58,
+    "originalPrice": 168,
+    "category": "运动户外",
+    "gradient": [
+      "#5ee7df",
+      "#b490ca"
+    ],
+    "accent": "#ffffff",
+    "emoji": "🧘",
+    "tag": "健身必备",
+    "matchScore": 83,
+    "matchFactor": "基于健身兴趣画像",
+    "description": "薄荷绿，TPE材质，6mm厚度防滑，附带5条弹力带。",
+    "sellerId": "u4",
+    "condition": "8成新",
+    "location": "复旦大学",
+    "views": 134,
+    "likes": 29,
+    "publishedAt": "2024-06-02",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p16%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%235ee7df%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23b490ca%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p16%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p16)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3E%E5%81%A5%E8%BA%AB%E5%BF%85%E5%A4%87%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E65%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%A7%98%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p16)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E5%81%A5%E8%BA%AB%E7%91%9C%E4%BC%BD%E5%9E%AB%20%2B%20%E5%BC%B9%E5%8A%9B%E5%B8%A6%E5%A5%97...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23b490ca%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3E%E8%BF%90%E5%8A%A8%E6%88%B7%E5%A4%96%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5168%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A558%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p16)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E83%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u4",
+        "userName": "赵同学",
+        "rating": 5,
+        "content": "码数合适，几乎全新，太值了！",
+        "likes": 9,
+        "createdAt": "2024-06-13"
+      },
+      {
+        "id": "c2",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 4,
+        "content": "穿着舒服，推荐购买～",
+        "likes": 6,
+        "createdAt": "2024-06-07"
+      }
+    ]
+  },
+  {
+    "id": "p17",
+    "title": "小米桌面风扇 2 档风速",
+    "price": 89,
+    "originalPrice": 199,
+    "category": "生活用品",
+    "gradient": [
+      "#a1c4fd",
+      "#c2e9fb"
+    ],
+    "accent": "#2193b0",
+    "emoji": "🌀",
+    "tag": "夏日清凉",
+    "matchScore": 81,
+    "matchFactor": "基于夏季需求画像",
+    "description": "USB供电，静音效果好，宿舍书桌必备。",
+    "sellerId": "u2",
+    "condition": "9成新",
+    "location": "北京大学",
+    "views": 98,
+    "likes": 18,
+    "publishedAt": "2024-06-16",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p17%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23a1c4fd%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23c2e9fb%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p17%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p17)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%232193b0%22%20text-anchor%3D%22middle%22%3E%E5%A4%8F%E6%97%A5%E6%B8%85%E5%87%89%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%232193b0%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E55%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%8C%80%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p17)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E5%B0%8F%E7%B1%B3%E6%A1%8C%E9%9D%A2%E9%A3%8E%E6%89%87%202%20%E6%A1%A3%E9%A3%8E%E9%80%9F%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23c2e9fb%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%232193b0%22%20text-anchor%3D%22middle%22%3E%E7%94%9F%E6%B4%BB%E7%94%A8%E5%93%81%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5199%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A589%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p17)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E81%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u2",
+        "userName": "李同学",
+        "rating": 5,
+        "content": "东西很新，卖家也很负责！物流超快，下次还会再来～",
+        "likes": 12,
+        "createdAt": "2024-06-15"
+      },
+      {
+        "id": "c2",
+        "userId": "u3",
+        "userName": "王同学",
+        "rating": 4,
+        "content": "性价比不错，推荐！成色和描述基本一致。",
+        "likes": 5,
+        "createdAt": "2024-06-10"
+      },
+      {
+        "id": "c3",
+        "userId": "u4",
+        "userName": "赵同学",
+        "rating": 5,
+        "content": "非常满意！卖家态度很好，当面验货很放心。",
+        "likes": 8,
+        "createdAt": "2024-06-08"
+      }
+    ]
+  },
+  {
+    "id": "p18",
+    "title": "专业考研全套资料（数学+英语+政治）",
+    "price": 128,
+    "originalPrice": 499,
+    "category": "教材书籍",
+    "gradient": [
+      "#f093fb",
+      "#f5576c"
+    ],
+    "accent": "#fff200",
+    "emoji": "📚",
+    "tag": "考研必备",
+    "matchScore": 92,
+    "matchFactor": "基于考研用户画像",
+    "description": "考研党的福音，含张宇数学、肖秀荣政治、何凯文英语全套笔记。",
+    "sellerId": "u1",
+    "condition": "8成新",
+    "location": "清华大学",
+    "views": 445,
+    "likes": 112,
+    "publishedAt": "2024-06-01",
+    "liked": false,
+    "image": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20400%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad-p18%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20style%3D%22stop-color%3A%23f093fb%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20style%3D%22stop-color%3A%23f5576c%3Bstop-opacity%3A1%22%20%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22softShadow-p18%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%223%22%20%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%0A%20%20%3C!--%20%E8%83%8C%E6%99%AF%20--%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22url(%23grad-p18)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E6%80%A7%E5%9C%86%E7%82%B9%EF%BC%88%E5%B0%8F%E7%BA%A2%E4%B9%A6%E9%A3%8E%E6%A0%BC%EF%BC%89%20--%3E%0A%20%20%3Ccircle%20cx%3D%2260%22%20cy%3D%2260%22%20r%3D%2280%22%20fill%3D%22white%22%20fill-opacity%3D%220.08%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22340%22%20cy%3D%22340%22%20r%3D%22100%22%20fill%3D%22white%22%20fill-opacity%3D%220.06%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%2280%22%20r%3D%2240%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%22320%22%20r%3D%2235%22%20fill%3D%22white%22%20fill-opacity%3D%220.05%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E8%A3%85%E9%A5%B0%E7%BA%BF%E6%9D%A1%20--%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22380%22%20x2%3D%22400%22%20y2%3D%22380%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%20%20%3Cline%20x1%3D%220%22%20y1%3D%22370%22%20x2%3D%22400%22%20y2%3D%22370%22%20stroke%3D%22white%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.1%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%8F%B3%E4%B8%8A%E8%A7%92%E5%88%86%E7%B1%BB%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%22220%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%22295%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22600%22%20fill%3D%22%23fff200%22%20text-anchor%3D%22middle%22%3E%E8%80%83%E7%A0%94%E5%BF%85%E5%A4%87%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%8A%98%E6%89%A3%E6%A0%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2285%22%20height%3D%2238%22%20rx%3D%2219%22%20fill%3D%22%23fff200%22%20fill-opacity%3D%220.95%22%2F%3E%0A%20%20%3Ctext%20x%3D%2272%22%20y%3D%2255%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2215%22%20font-weight%3D%22700%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E74%25OFF%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%B8%BB%E5%95%86%E5%93%81%E5%9B%BE%E6%A0%87%EF%BC%88%E5%A4%A7Emoji%EF%BC%89%20--%3E%0A%20%20%3Ctext%20x%3D%22200%22%20y%3D%22210%22%20font-size%3D%22110%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3E%F0%9F%93%9A%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%BA%95%E9%83%A8%E5%95%86%E5%93%81%E5%90%8D%E5%8D%A1%E7%89%87%20--%3E%0A%20%20%3Crect%20x%3D%2230%22%20y%3D%22280%22%20width%3D%22340%22%20height%3D%2295%22%20rx%3D%2220%22%20fill%3D%22white%22%20fill-opacity%3D%220.96%22%20filter%3D%22url(%23softShadow-p18)%22%2F%3E%0A%20%20%0A%20%20%3C!--%20%E5%95%86%E5%93%81%E5%90%8D%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22318%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2220%22%20font-weight%3D%22700%22%20fill%3D%22%231a1a2e%22%20text-anchor%3D%22start%22%3E%E4%B8%93%E4%B8%9A%E8%80%83%E7%A0%94%E5%85%A8%E5%A5%97%E8%B5%84%E6%96%99%EF%BC%88%E6%95%B0%E5%AD%A6%2B...%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%88%86%E7%B1%BB%E5%B0%8F%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Crect%20x%3D%2255%22%20y%3D%22332%22%20width%3D%2268%22%20height%3D%2222%22%20rx%3D%2211%22%20fill%3D%22%23f5576c%22%20fill-opacity%3D%220.18%22%2F%3E%0A%20%20%3Ctext%20x%3D%2289%22%20y%3D%22348%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23fff200%22%20text-anchor%3D%22middle%22%3E%E6%95%99%E6%9D%90%E4%B9%A6%E7%B1%8D%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E4%BB%B7%E6%A0%BC%20--%3E%0A%20%20%3Ctext%20x%3D%2255%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22500%22%20fill%3D%22%23999%22%20text-decoration%3D%22line-through%22%3E%C2%A5499%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22220%22%20y%3D%22368%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22start%22%3E%C2%A5128%3C%2Ftext%3E%0A%20%20%0A%20%20%3C!--%20%E5%8C%B9%E9%85%8D%E5%BA%A6%E6%A0%87%E7%AD%BE%20--%3E%0A%20%20%3Ccircle%20cx%3D%22350%22%20cy%3D%22110%22%20r%3D%2238%22%20fill%3D%22white%22%20fill-opacity%3D%220.95%22%20filter%3D%22url(%23softShadow-p18)%22%2F%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22108%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22500%22%20fill%3D%22%23666%22%20text-anchor%3D%22middle%22%3E%F0%9F%94%A5%E5%8C%B9%E9%85%8D%E5%BA%A6%3C%2Ftext%3E%0A%20%20%3Ctext%20x%3D%22350%22%20y%3D%22130%22%20font-family%3D%22'PingFang%20SC'%2C'Microsoft%20YaHei'%2Csans-serif%22%20font-size%3D%2218%22%20font-weight%3D%22800%22%20fill%3D%22%23ff4e50%22%20text-anchor%3D%22middle%22%3E92%25%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+    "comments": [
+      {
+        "id": "c1",
+        "userId": "u1",
+        "userName": "张同学",
+        "rating": 5,
+        "content": "笔记很详细，帮到我了，感谢！",
+        "likes": 15,
+        "createdAt": "2024-06-14"
+      },
+      {
+        "id": "c2",
+        "userId": "u5",
+        "userName": "孙同学",
+        "rating": 4,
+        "content": "书本保存得很好，几乎全新。",
+        "likes": 7,
+        "createdAt": "2024-06-12"
+      }
+    ]
+  }
+]

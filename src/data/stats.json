@@ -1,0 +1,77 @@
+{
+  "categories": [
+    { "id": "all", "name": "全部", "icon": "Grid3X3" },
+    { "id": "数码电子", "name": "数码电子", "icon": "Laptop" },
+    { "id": "教材书籍", "name": "教材书籍", "icon": "BookOpen" },
+    { "id": "运动户外", "name": "运动户外", "icon": "Trophy" },
+    { "id": "服装配饰", "name": "服装配饰", "icon": "Shirt" },
+    { "id": "生活用品", "name": "生活用品", "icon": "Home" },
+    { "id": "出行工具", "name": "出行工具", "icon": "Bike" }
+  ],
+  "hotCategories": [
+    { "name": "数码电子", "value": 1286, "color": "#22c55e" },
+    { "name": "教材书籍", "value": 956, "color": "#16a34a" },
+    { "name": "生活用品", "value": 724, "color": "#4ade80" },
+    { "name": "运动户外", "value": 512, "color": "#86efac" },
+    { "name": "服装配饰", "value": 398, "color": "#bbf7d0" }
+  ],
+  "activeHours": [
+    { "hour": "00", "transactions": 32 },
+    { "hour": "02", "transactions": 18 },
+    { "hour": "04", "transactions": 12 },
+    { "hour": "06", "transactions": 28 },
+    { "hour": "08", "transactions": 85 },
+    { "hour": "10", "transactions": 145 },
+    { "hour": "12", "transactions": 198 },
+    { "hour": "14", "transactions": 165 },
+    { "hour": "16", "transactions": 210 },
+    { "hour": "18", "transactions": 268 },
+    { "hour": "20", "transactions": 320 },
+    { "hour": "22", "transactions": 186 }
+  ],
+  "weeklyTrend": [
+    { "day": "周一", "views": 4200, "likes": 860, "messages": 280 },
+    { "day": "周二", "views": 3800, "likes": 720, "messages": 240 },
+    { "day": "周三", "views": 4500, "likes": 920, "messages": 310 },
+    { "day": "周四", "views": 5200, "likes": 1080, "messages": 380 },
+    { "day": "周五", "views": 5800, "likes": 1250, "messages": 450 },
+    { "day": "周六", "views": 3200, "likes": 680, "messages": 180 },
+    { "day": "周日", "views": 2800, "likes": 520, "messages": 150 }
+  ],
+  "userPersonas": [
+    { "name": "毕业季清仓党", "count": 2860, "color": "#22c55e" },
+    { "name": "新生装备党", "count": 3420, "color": "#16a34a" },
+    { "name": "考研学习党", "count": 2150, "color": "#4ade80" },
+    { "name": "健身运动党", "count": 1680, "color": "#86efac" },
+    { "name": "数码游戏党", "count": 1920, "color": "#bbf7d0" }
+  ],
+  "carbonStats": {
+    "totalReduced": 12856.8,
+    "unit": "kg",
+    "equivalentTrees": 712,
+    "weeklyTransactions": 2846,
+    "totalItems": 15680
+  },
+  "userBehavior": {
+    "totalViews": 28456,
+    "totalLikes": 5642,
+    "totalMessages": 1856,
+    "matchRate": 85.6
+  },
+  "recentTransactions": [
+    { "id": "t1", "product": "iPad Air 5 64G", "seller": "小明同学", "buyer": "环保少女Lisa", "price": 2600, "category": "数码电子", "status": "已完成", "time": "10 分钟前" },
+    { "id": "t2", "product": "高等数学教材（第八版）", "seller": "程序员阿杰", "buyer": "运动健将阿涛", "price": 35, "category": "教材书籍", "status": "进行中", "time": "25 分钟前" },
+    { "id": "t3", "product": "捷安特山地自行车", "seller": "运动健将阿涛", "buyer": "小明同学", "price": 880, "category": "出行工具", "status": "进行中", "time": "1 小时前" },
+    { "id": "t4", "product": "Nike Air Max 运动鞋", "seller": "学姐小雨", "buyer": "环保少女Lisa", "price": 350, "category": "运动户外", "status": "已完成", "time": "2 小时前" },
+    { "id": "t5", "product": "宿舍台灯（可调光）", "seller": "环保少女Lisa", "buyer": "程序员阿杰", "price": 68, "category": "生活用品", "status": "已完成", "time": "3 小时前" },
+    { "id": "t6", "product": "Sony WH-1000XM4 降噪耳机", "seller": "小明同学", "buyer": "学姐小雨", "price": 1280, "category": "数码电子", "status": "待确认", "time": "5 小时前" },
+    { "id": "t7", "product": "牛津高阶英汉双解词典", "seller": "程序员阿杰", "buyer": "运动健将阿涛", "price": 58, "category": "教材书籍", "status": "已完成", "time": "昨天" },
+    { "id": "t8", "product": "复古牛仔外套（全新）", "seller": "学姐小雨", "buyer": "环保少女Lisa", "price": 180, "category": "服装配饰", "status": "进行中", "time": "昨天" }
+  ],
+  "kpiData": [
+    { "title": "累计用户", "value": "12,036", "growth": "+18.6%", "icon": "users", "color": "blue" },
+    { "title": "在售商品", "value": "8,524", "growth": "+12.3%", "icon": "package", "color": "eco" },
+    { "title": "今日交易", "value": "286", "growth": "+25.4%", "icon": "trending", "color": "amber" },
+    { "title": "平均交易", "value": "¥328", "growth": "+8.2%", "icon": "dollar", "color": "rose" }
+  ]
+}

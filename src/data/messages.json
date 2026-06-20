@@ -1,0 +1,141 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "type": "bid",
+      "icon": "Heart",
+      "title": "你的收藏有新出价",
+      "text": "iPad Air 5 有人出价 ¥2600",
+      "time": "2 分钟前",
+      "color": "text-pink-500 bg-pink-50",
+      "unread": true,
+      "link": "product:p1"
+    },
+    {
+      "id": 2,
+      "type": "message",
+      "icon": "MessageSquare",
+      "title": "新的私信",
+      "text": "张同学：这个教材你还要吗？",
+      "time": "15 分钟前",
+      "color": "text-blue-500 bg-blue-50",
+      "unread": true,
+      "link": "chat:u2"
+    },
+    {
+      "id": 3,
+      "type": "match",
+      "icon": "TrendingUp",
+      "title": "智能匹配 · 高相关商品",
+      "text": "为你匹配到 3 件你可能感兴趣的物品",
+      "time": "1 小时前",
+      "color": "text-emerald-500 bg-emerald-50",
+      "unread": true,
+      "link": "home"
+    },
+    {
+      "id": 4,
+      "type": "transaction",
+      "icon": "Check",
+      "title": "交易提醒",
+      "text": "恭喜！你的 AirPods Pro 已被预订",
+      "time": "3 小时前",
+      "color": "text-amber-500 bg-amber-50",
+      "unread": false,
+      "link": "product:p9"
+    },
+    {
+      "id": 5,
+      "type": "system",
+      "icon": "ShoppingBag",
+      "title": "系统公告",
+      "text": "毕业季闲置清仓活动已开启，限时一周",
+      "time": "昨天",
+      "color": "text-slate-500 bg-slate-100",
+      "unread": false,
+      "link": "home"
+    },
+    {
+      "id": 6,
+      "type": "credit",
+      "icon": "AlertCircle",
+      "title": "信用提示",
+      "text": "您的信用等级已升级到 A+，感谢诚信交易",
+      "time": "2 天前",
+      "color": "text-emerald-500 bg-emerald-50",
+      "unread": false,
+      "link": "profile"
+    }
+  ],
+  "chats": [
+    {
+      "id": "chat:u2",
+      "userId": "u2",
+      "name": "张同学",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Zhang",
+      "school": "北京大学",
+      "lastMessage": "这个教材你还要吗？",
+      "time": "15 分钟前",
+      "unread": true,
+      "product": "高等数学教材 同济七版",
+      "productId": "p2",
+      "messages": [
+        { "id": 1, "sender": "other", "text": "你好，我看到你发布的高数教材还在吗？", "time": "昨天 20:30" },
+        { "id": 2, "sender": "me", "text": "还在的，8成新，有少量笔记", "time": "昨天 20:32" },
+        { "id": 3, "sender": "other", "text": "太好了！我是大一新生，正好需要。能便宜点吗？", "time": "昨天 20:35" },
+        { "id": 4, "sender": "me", "text": "已经很便宜啦，原价45，现在只要15。如果你确定要，可以面交的时候再谈", "time": "昨天 20:40" },
+        { "id": 5, "sender": "other", "text": "这个教材你还要吗？", "time": "15 分钟前" }
+      ]
+    },
+    {
+      "id": "chat:u3",
+      "userId": "u3",
+      "name": "李学长",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Li",
+      "school": "浙江大学",
+      "lastMessage": "好的，明天下午3点图书馆见",
+      "time": "1 小时前",
+      "unread": false,
+      "product": "MacBook Pro 14 寸",
+      "productId": "p5",
+      "messages": [
+        { "id": 1, "sender": "other", "text": "你好，MacBook Pro 还在吗？", "time": "今天 10:00" },
+        { "id": 2, "sender": "me", "text": "还在的，9成新，16G+512G", "time": "今天 10:05" },
+        { "id": 3, "sender": "other", "text": "价格还能优惠吗？", "time": "今天 10:10" },
+        { "id": 4, "sender": "me", "text": "已经比原价便宜很多了，6800最低了", "time": "今天 10:15" },
+        { "id": 5, "sender": "other", "text": "好的，明天下午3点图书馆见", "time": "1 小时前" }
+      ]
+    },
+    {
+      "id": "chat:u4",
+      "userId": "u4",
+      "name": "王同学",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Wang",
+      "school": "复旦大学",
+      "lastMessage": "吉他还在吗？想试一下",
+      "time": "3 小时前",
+      "unread": false,
+      "product": "雅马哈 F310 民谣吉他",
+      "productId": "p13",
+      "messages": [
+        { "id": 1, "sender": "other", "text": "吉他还在吗？想试一下", "time": "3 小时前" }
+      ]
+    },
+    {
+      "id": "chat:u5",
+      "userId": "u5",
+      "name": "陈同学",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Chen",
+      "school": "上海交通大学",
+      "lastMessage": "跑鞋是42码的吗？",
+      "time": "昨天",
+      "unread": false,
+      "product": "Nike Air Zoom 跑鞋",
+      "productId": "p4",
+      "messages": [
+        { "id": 1, "sender": "other", "text": "跑鞋是42码的吗？", "time": "昨天 18:00" },
+        { "id": 2, "sender": "me", "text": "是的，42码，只穿过几次", "time": "昨天 18:05" }
+      ]
+    }
+  ]
+}

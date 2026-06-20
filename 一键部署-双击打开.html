@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>校园智转 CampusFlow · 一键部署</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+  .gradient-bg { background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 50%, #86efac 100%); }
+  .card-hover { transition: all 0.3s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(34, 197, 94, 0.3); }
+</style>
+</head>
+<body class="gradient-bg min-h-screen">
+<div class="max-w-4xl mx-auto px-4 py-12">
+
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-600 text-white text-3xl mb-6 shadow-lg">🌱</div>
+    <h1 class="text-4xl font-bold text-gray-900 mb-3">校园智转 CampusFlow</h1>
+    <p class="text-lg text-gray-700">闲置物品智能匹配流转平台 · 一键部署到公网</p>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-3 mb-8">
+    <a href="https://app.netlify.com/drop" target="_blank" rel="noopener" class="card-hover block bg-white rounded-2xl p-6 shadow-lg border border-teal-100">
+      <div class="text-4xl mb-4">🚀</div>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Netlify Drop · 推荐</h3>
+      <p class="text-gray-600 text-sm leading-relaxed mb-4">打开页面，把整个文件夹拖进去，0 命令，几秒钟获得公网链接（`*.netlify.app`）。</p>
+      <span class="text-teal-600 font-medium text-sm">点击打开 Netlify Drop →</span>
+    </a>
+
+    <a href="https://vercel.com/new" target="_blank" rel="noopener" class="card-hover block bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+      <div class="text-4xl mb-4">⚡</div>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Vercel 部署</h3>
+      <p class="text-gray-600 text-sm leading-relaxed mb-4">在项目根目录执行 <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">npx vercel --prod</code>，获得 `*.vercel.app` 公网链接。</p>
+      <span class="text-gray-600 font-medium text-sm">打开 Vercel →</span>
+    </a>
+
+    <a href="https://pages.cloudflare.com/" target="_blank" rel="noopener" class="card-hover block bg-white rounded-2xl p-6 shadow-lg border border-orange-100">
+      <div class="text-4xl mb-4">🌐</div>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">Cloudflare Pages</h3>
+      <p class="text-gray-600 text-sm leading-relaxed mb-4">拖拽上传 dist 目录，或连接 Git 仓库自动部署。全球 CDN 加速，永久免费。</p>
+      <span class="text-orange-600 font-medium text-sm">打开 Cloudflare →</span>
+    </a>
+  </div>
+
+  <div class="bg-white rounded-2xl p-8 shadow-lg mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">📋 最快速部署步骤（30 秒）</h2>
+    <ol class="space-y-4">
+      <li class="flex items-start gap-4">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">1</span>
+        <div>
+          <p class="font-medium text-gray-900 mb-1">打开 <a href="https://app.netlify.com/drop" target="_blank" class="text-teal-600 underline">app.netlify.com/drop</a></p>
+          <p class="text-gray-600 text-sm">会看到一个大大的拖放区域</p>
+        </div>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">2</span>
+        <div>
+          <p class="font-medium text-gray-900 mb-1">把 <code class="bg-gray-100 px-2 py-0.5 rounded text-sm text-gray-700">dist</code> 文件夹拖到页面上</p>
+          <p class="text-gray-600 text-sm">就是你看到本页面的这个文件夹。注意：拖整个文件夹，而不是单个文件。</p>
+        </div>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">3</span>
+        <div>
+          <p class="font-medium text-gray-900 mb-1">等待 10 秒，获得你的公网链接！</p>
+          <p class="text-gray-600 text-sm">链接形如 <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">https://xxx-xxx-xxx.netlify.app</code>，可以分享给任何人访问。</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">🎯 本网站已包含以下功能</h2>
+    <div class="grid gap-3 md:grid-cols-2">
+      <div class="flex items-center gap-2 text-gray-700"><span class="text-emerald-600">✓</span> 首页智能推荐流（匹配度标签）</div>
+      <div class="flex items-center gap-2 text-gray-700"><span class="text-emerald-600">✓</span> 搜索 + 分类导航（7 大分类）</div>
+      <div class="flex items-center gap-2 text-gray-700"><span class="text-emerald-600">✓</span> 数据可视化看板（柱状图+折线图）</div>
+      <div class="flex items-center gap-2 text-gray-700"><span class="text-emerald-600">✓</span> 商品详情弹窗（信用评分）</div>
+      <div class="flex items-center gap-2 text-gray-700"><span class="text-emerald-600">✓</span> 发布入口（悬浮 + 按钮）</div>
+      <div class="flex items-center gap-2 text-gray-700"><span class="text-emerald-600">✓</span> 响应式设计（手机/桌面完美适配）</div>
+      <div class="flex items-center gap-2 text-gray-700"><span class="text-emerald-600">✓</span> 环保绿主题配色</div>
+      <div class="flex items-center gap-2 text-gray-700"><span class="text-emerald-600">✓</span> 单文件离线版本（双击可打开）</div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-2xl p-8 shadow-lg mb-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">📁 文件结构说明</h2>
+    <pre class="bg-gray-900 text-emerald-300 p-4 rounded-xl text-sm overflow-x-auto leading-relaxed">
+校园闲置/
+├── dist/                           ← 【部署用】只需要上传这个文件夹
+│   ├── index.html                  ← 标准入口
+│   ├── campusflow-offline.html     ← 单文件离线版（双击打开，无需部署）
+│   └── assets/                     ← 打包好的 JS/CSS
+├── 一键部署-双击打开.html            ← 你正在看的这个页面
+├── README.md                       ← 详细说明文档
+└── src/                            ← 源代码（开发时使用）
+    </pre>
+  </div>
+
+  <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+    <h3 class="font-bold text-amber-900 mb-2">💡 小提示</h3>
+    <p class="text-amber-800 text-sm leading-relaxed">
+      如果你只是想快速预览效果，不需要部署到公网，可以直接双击打开
+      <code class="bg-amber-100 px-2 py-0.5 rounded font-mono">dist/campusflow-offline.html</code>
+      在浏览器中查看完整网站。
+    </p>
+  </div>
+
+  <div class="text-center mt-10 text-gray-600 text-sm">
+    <p>校园智转 CampusFlow · 让闲置物品流转起来 🌱</p>
+  </div>
+
+</div>
+</body>
+</html>

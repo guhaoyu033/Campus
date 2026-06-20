@@ -1,0 +1,62 @@
+[
+  {
+    "id": "u1",
+    "email": "xiaoming@campus.edu",
+    "password": "123456",
+    "name": "小明同学",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix",
+    "school": "清华大学",
+    "creditScore": 98,
+    "tradeCount": 42,
+    "tags": ["学霸", "电子控"],
+    "joinedAt": "2024-03-15"
+  },
+  {
+    "id": "u2",
+    "email": "lisa@campus.edu",
+    "password": "123456",
+    "name": "环保少女Lisa",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka",
+    "school": "北京大学",
+    "creditScore": 95,
+    "tradeCount": 28,
+    "tags": ["环保达人", "图书爱好者"],
+    "joinedAt": "2024-04-20"
+  },
+  {
+    "id": "u3",
+    "email": "ajie@campus.edu",
+    "password": "123456",
+    "name": "程序员阿杰",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Milo",
+    "school": "浙江大学",
+    "creditScore": 92,
+    "tradeCount": 56,
+    "tags": ["数码极客", "可信卖家"],
+    "joinedAt": "2024-02-08"
+  },
+  {
+    "id": "u4",
+    "email": "xiaoyu@campus.edu",
+    "password": "123456",
+    "name": "学姐小雨",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Luna",
+    "school": "复旦大学",
+    "creditScore": 99,
+    "tradeCount": 15,
+    "tags": ["美妆穿搭", "毕业季"],
+    "joinedAt": "2024-05-10"
+  },
+  {
+    "id": "u5",
+    "email": "atao@campus.edu",
+    "password": "123456",
+    "name": "运动健将阿涛",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sam",
+    "school": "上海交大",
+    "creditScore": 90,
+    "tradeCount": 23,
+    "tags": ["运动达人", "户外装备"],
+    "joinedAt": "2024-06-01"
+  }
+]
