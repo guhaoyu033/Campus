@@ -16,13 +16,16 @@ import Login from './components/Login';
 import Register from './components/Register';
 import productsData from './data/products.json';
 import messagesData from './data/messages.json';
+import localStore from './store/localStore';
 
 function App() {
-  const [user, setUser] = useState(null);
-  const [addressBook, setAddressBook] = useState([]);
+  const [user, setUser] = useState(() => localStore.getUser());
+  const [addressBook, setAddressBook] = useState(() => localStore.getAddressBook());
   const [selectedAddressId, setSelectedAddressId] = useState(null);
   const [showAddressModal, setShowAddressModal] = useState(false);
-  const [products, setProducts] = useState(productsData.map(p => ({ ...p, status: p.status || 'active' })));
+  const [products, setProducts] = useState(() =>
+    localStore.getProducts(productsData.map(p => ({ ...p, status: p.status || 'active' })))
+  );
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showDashboard, setShowDashboard] = useState(false);
   const [showPublish, setShowPublish] = useState(false);
@@ -37,11 +40,19 @@ function App() {
   const [sortBy, setSortBy] = useState('match');
   const [toast, setToast] = useState(null);
   const [priceRange, setPriceRange] = useState({ min: '', max: '' });
-  const [cart, setCart] = useState([]);
-  const [orders, setOrders] = useState([]);
-  const [viewHistory, setViewHistory] = useState([]);
+  const [cart, setCart] = useState(() => localStore.getCart());
+  const [orders, setOrders] = useState(() => localStore.getOrders());
+  const [viewHistory, setViewHistory] = useState(() => localStore.getViewHistory());
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
+
+  // === localStorage 自动同步 ===
+  useEffect(() => localStore.setUser(user), [user]);
+  useEffect(() => localStore.setProducts(products), [products]);
+  useEffect(() => localStore.setCart(cart), [cart]);
+  useEffect(() => localStore.setOrders(orders), [orders]);
+  useEffect(() => localStore.setAddressBook(addressBook), [addressBook]);
+  useEffect(() => localStore.setViewHistory(viewHistory), [viewHistory]);
 
   const filteredProducts = useMemo(() => {
     return products.filter((p) => {

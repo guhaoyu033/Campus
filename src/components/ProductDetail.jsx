@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { X, MapPin, Star, ShieldCheck, Eye, Heart, MessageCircle, ThumbsUp, Clock, Tag, ShoppingCart, Sparkles, MessageSquare, Edit3, CheckCircle, Trash2, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useRef, useMemo } from 'react';
+import { X, MapPin, Star, ShieldCheck, Eye, Heart, MessageCircle, ThumbsUp, Clock, Tag, ShoppingCart, Sparkles, MessageSquare, Edit3, CheckCircle, Trash2, ChevronRight, ChevronLeft, ZoomIn } from 'lucide-react';
 
 export default function ProductDetail({ product, seller, relatedProducts = [], user, onClose, onToast, onToggleLike, onAddComment, onToggleCommentLike, onAddToCart, onSelectProduct }) {
   const [liked, setLiked] = useState(product.liked);
@@ -8,6 +8,42 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
   const [showCommentModal, setShowCommentModal] = useState(false);
   const [newRating, setNewRating] = useState(5);
   const [newContent, setNewContent] = useState('');
+
+  // === 图片轮播 ===
+  const scrollRef = useRef(null);
+  const [imgIndex, setImgIndex] = useState(0);
+  const [previewImage, setPreviewImage] = useState(null);
+
+  const images = useMemo(() => {
+    const list = Array.isArray(product.images) && product.images.length > 0
+      ? product.images
+      : (product.image ? [product.image] : []);
+    return list;
+  }, [product.images, product.image]);
+
+  const scrollToIndex = (idx) => {
+    const el = scrollRef.current;
+    if (!el || images.length === 0) return;
+    const clamped = Math.max(0, Math.min(images.length - 1, idx));
+    const width = el.clientWidth;
+    el.scrollTo({ left: clamped * width, behavior: 'smooth' });
+    setImgIndex(clamped);
+  };
+
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el || images.length === 0) return;
+    const idx = Math.round(el.scrollLeft / el.clientWidth);
+    if (idx !== imgIndex) setImgIndex(idx);
+  };
+
+  useEffect(() => {
+    setImgIndex(0);
+  }, [product.id]);
+
+  useEffect(() => {
+    if (previewImage !== null) document.body.style.overflow = 'hidden';
+  }, [previewImage]);
 
   const comments = Array.isArray(product.comments) ? product.comments : [];
   const avgRating = comments.length > 0
@@ -111,27 +147,106 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-end sm:items-center justify-center animate-fade-in" onClick={handleBackdropClick}>
       <div className="bg-white w-full sm:max-w-3xl sm:rounded-3xl rounded-t-3xl max-h-[92vh] overflow-hidden shadow-2xl animate-slide-up flex flex-col" onClick={(e) => e.stopPropagation()}>
-        <div className="relative">
-          <div className="aspect-[16/10] sm:aspect-video bg-slate-100 overflow-hidden">
-            {product.image && product.image.startsWith('data:') ? (
-              <img src={product.image} alt={product.title} className="w-full h-full object-cover" onError={imageFallback} />
-            ) : product.image ? (
-              <img src={product.image} alt={product.title} className="w-full h-full object-cover" onError={imageFallback} />
-            ) : null}
-            <div className="w-full h-full hidden items-center justify-center bg-gradient-to-br from-eco-100 to-emerald-100 text-8xl">
+        <div className="relative bg-gradient-to-b from-eco-50/60 to-white">
+          {/* 轮播图片区 */}
+          {images.length > 0 ? (
+            <div className="relative">
+              <div
+                ref={scrollRef}
+                onScroll={handleScroll}
+                className="aspect-[16/10] sm:aspect-video overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory flex"
+                style={{ scrollbarWidth: 'none' }}
+              >
+                {images.map((img, idx) => (
+                  <div
+                    key={idx}
+                    className="snap-center flex-shrink-0 w-full aspect-[16/10] sm:aspect-video bg-slate-100 relative cursor-zoom-in"
+                    onClick={() => setPreviewImage(img)}
+                  >
+                    <img
+                      src={img}
+                      alt={`${product.title} ${idx + 1}`}
+                      className="w-full h-full object-cover"
+                      onError={imageFallback}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent pointer-events-none" />
+                  </div>
+                ))}
+              </div>
+
+              {/* 左右箭头 */}
+              {images.length > 1 && (
+                <>
+                  <button
+                    onClick={() => scrollToIndex(imgIndex - 1)}
+                    disabled={imgIndex === 0}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg backdrop-blur flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => scrollToIndex(imgIndex + 1)}
+                    disabled={imgIndex === images.length - 1}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg backdrop-blur flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+
+                  {/* 圆点指示器 */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 bg-slate-900/40 backdrop-blur-sm rounded-full">
+                    {images.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => scrollToIndex(idx)}
+                        className={`rounded-full transition-all ${
+                          idx === imgIndex
+                            ? 'w-5 h-2 bg-white'
+                            : 'w-2 h-2 bg-white/50 hover:bg-white/80'
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  {/* 图片计数 */}
+                  <div className="absolute top-4 right-16 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-xs font-bold text-slate-700 shadow">
+                    {imgIndex + 1} / {images.length}
+                  </div>
+                </>
+              )}
+
+              {/* 放大提示（单图/多图均显示） */}
+              <button
+                onClick={() => setPreviewImage(images[imgIndex])}
+                className="absolute bottom-3 right-3 p-2 bg-white/90 hover:bg-white text-slate-700 rounded-full shadow-lg backdrop-blur transition-colors"
+                title="查看大图"
+              >
+                <ZoomIn className="w-4 h-4" />
+              </button>
+            </div>
+          ) : (
+            <div className="aspect-[16/10] sm:aspect-video flex items-center justify-center bg-gradient-to-br from-eco-100 to-emerald-100 text-8xl">
               {product.title.includes('iPad') || product.title.includes('Mac') ? '💻' :
                product.title.includes('鞋') || product.title.includes('跑鞋') ? '👟' :
                product.title.includes('书') || product.title.includes('教材') ? '📚' :
                product.title.includes('车') || product.title.includes('滑板') ? '🛴' :
                product.title.includes('键盘') || product.title.includes('鼠标') ? '⌨️' : '🎁'}
             </div>
-          </div>
-          <button onClick={onClose} className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors">
+          )}
+
+          {/* 关闭按钮 */}
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors z-10"
+          >
             <X className="w-5 h-5 text-slate-700" />
           </button>
+
+          {/* 匹配度标签 */}
           <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-full bg-eco-600 text-white text-sm font-bold shadow-lg shadow-eco-600/30">
             🔥 {product.matchScore || 85}% 精准匹配
           </div>
+
+          {/* 状态标签 */}
           {product.status && product.status !== 'active' && (
             <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-slate-800/80 backdrop-blur-sm text-white text-xs font-bold shadow-lg">
               {product.status === 'offline' ? '已下架' : product.status === 'sold' ? '已售出' : ''}
@@ -360,6 +475,35 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
           </button>
         </div>
       </div>
+
+      {/* === 全屏图片预览 === */}
+      {previewImage !== null && (
+        <div
+          className="fixed inset-0 z-[70] bg-slate-900/95 backdrop-blur-sm flex items-center justify-center animate-fade-in"
+          onClick={(e) => {
+            e.stopPropagation();
+            setPreviewImage(null);
+          }}
+        >
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setPreviewImage(null);
+            }}
+            className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+          <img
+            src={previewImage}
+            alt="大图预览"
+            className="max-w-[92vw] max-h-[85vh] object-contain rounded-2xl shadow-2xl animate-slide-up"
+          />
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/10 rounded-full text-xs text-white/80">
+            点击任意位置关闭
+          </div>
+        </div>
+      )}
 
       {showCommentModal && (
         <div className="fixed inset-0 z-[60] bg-slate-900/60 backdrop-blur-sm flex items-end sm:items-center justify-center animate-fade-in" onClick={() => setShowCommentModal(false)}>
