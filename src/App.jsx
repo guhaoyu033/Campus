@@ -12,6 +12,8 @@ import UserProfile from './components/UserProfile';
 import ChatPanel from './components/ChatPanel';
 import CartPage from './components/CartPage';
 import OrdersPage from './components/OrdersPage';
+import Login from './components/Login';
+import Register from './components/Register';
 import productsData from './data/products.json';
 import messagesData from './data/messages.json';
 
@@ -38,6 +40,8 @@ function App() {
   const [cart, setCart] = useState([]);
   const [orders, setOrders] = useState([]);
   const [viewHistory, setViewHistory] = useState([]);
+  const [showLogin, setShowLogin] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
 
   const filteredProducts = useMemo(() => {
     return products.filter((p) => {
@@ -216,24 +220,23 @@ function App() {
     showToast('🎉 发布成功！你的闲置商品已上架');
   };
 
-  const handleLogin = () => {
-    const newUser = {
-      id: 'u1',
-      name: '张同学',
-      email: 'student@campus.edu',
-      school: '浙江大学',
-      creditScore: 92,
-      tradeCount: 5
-    };
-    if (Array.isArray(newUser.addresses) && newUser.addresses.length > 0) {
-      setAddressBook(newUser.addresses);
-    } else {
-      setAddressBook([]);
-    }
-    setUser(newUser);
+  const handleOpenLogin = () => {
+    setShowLogin(true);
+    setShowRegister(false);
+  };
+
+  const handleOpenRegister = () => {
+    setShowRegister(true);
+    setShowLogin(false);
+  };
+
+  const handleUserLogin = (userData) => {
+    setUser(userData);
+    setShowLogin(false);
+    setShowRegister(false);
+    setAddressBook([]);
     setSelectedAddressId(null);
-    setShowAddressModal(false);
-    showToast('欢迎回来！登录成功 🎉', 'success');
+    showToast(`欢迎回来，${userData.name || '同学'}！🎉`, 'success');
   };
 
   const handleLogout = () => {
@@ -321,7 +324,7 @@ function App() {
         cartCount={cart.length}
         ordersCount={orders.length}
         user={user}
-        onLogin={handleLogin}
+        onLogin={handleOpenLogin}
         onLogout={handleLogout}
         onOpenChat={handleOpenChat}
       />
@@ -597,7 +600,7 @@ function App() {
           cart={cart}
           viewHistory={viewHistory}
           onClose={() => setShowProfile(false)}
-          onLogin={handleLogin}
+          onLogin={handleOpenLogin}
           onToast={showToast}
           onUpdateUser={handleUpdateUser}
           onSaveAddressBook={handleSaveAddressBook}
@@ -678,7 +681,7 @@ function App() {
           <button
             onClick={() => {
               if (!user) {
-                handleLogin();
+                handleOpenLogin();
                 return;
               }
               setShowPublish(true);
@@ -690,6 +693,30 @@ function App() {
           <span className="text-xs font-bold text-eco-700 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-lg shadow-sm whitespace-nowrap">发布闲置</span>
         </div>
       </div>
+
+      {showLogin && (
+        <Login
+          onLogin={handleUserLogin}
+          onClose={() => setShowLogin(false)}
+          onSwitchToRegister={() => {
+            setShowLogin(false);
+            setShowRegister(true);
+          }}
+          onToast={showToast}
+        />
+      )}
+
+      {showRegister && (
+        <Register
+          onLogin={handleUserLogin}
+          onClose={() => setShowRegister(false)}
+          onSwitchToLogin={() => {
+            setShowRegister(false);
+            setShowLogin(true);
+          }}
+          onToast={showToast}
+        />
+      )}
 
       {toast && (
         <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[60] animate-slide-up">

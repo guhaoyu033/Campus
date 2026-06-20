@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Leaf, Mail, Lock, Eye, EyeOff, User, GraduationCap, ArrowRight, AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
+import { Leaf, Mail, Lock, Eye, EyeOff, User, GraduationCap, ArrowRight, AlertCircle, CheckCircle, Loader2, X } from 'lucide-react';
 import { register, validateEmail, validatePassword, validateName } from '../store/authStore';
 
-export default function Register({ onRegister, onSwitchToLogin, onBack }) {
+export default function Register({ onLogin, onClose, onSwitchToLogin }) {
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -59,7 +59,7 @@ export default function Register({ onRegister, onSwitchToLogin, onBack }) {
         password: form.password,
         school: form.school || '未填写学校',
       });
-      onRegister(user);
+      onLogin(user);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -68,24 +68,26 @@ export default function Register({ onRegister, onSwitchToLogin, onBack }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-eco-50 via-white to-emerald-50 flex items-center justify-center p-4 sm:p-6 py-8">
-      <div className="w-full max-w-md">
-        {/* Logo */}
-        <div className="text-center mb-6">
+    <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm animate-fade-in">
+      <div className="absolute inset-0" onClick={onClose} />
+      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden animate-slide-up max-h-[90vh] overflow-y-auto">
+        {/* 顶部 Logo */}
+        <div className="bg-gradient-to-br from-eco-500 via-eco-500 to-emerald-500 px-6 py-6 text-white text-center relative">
           <button
-            onClick={onBack}
-            className="inline-flex items-center gap-2 mx-auto mb-5 group"
+            onClick={onClose}
+            className="absolute top-4 right-4 p-2 rounded-xl bg-white/20 hover:bg-white/30 text-white/90 hover:text-white transition-colors"
           >
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-eco-500 to-eco-700 flex items-center justify-center shadow-lg shadow-eco-500/30 group-hover:shadow-eco-500/50 transition-shadow">
-              <Leaf className="w-6 h-6 text-white" />
-            </div>
+            <X className="w-5 h-5" />
           </button>
-          <h1 className="text-3xl font-black text-slate-900 mb-2">创建账号</h1>
-          <p className="text-sm text-slate-500">加入校园智转，开启环保校园生活</p>
+          <div className="w-14 h-14 mx-auto bg-white/25 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg mb-3">
+            <Leaf className="w-8 h-8 text-white" />
+          </div>
+          <h1 className="text-2xl font-black mb-1">创建账号</h1>
+          <p className="text-sm text-white/80">加入校园智转，开启环保校园生活</p>
         </div>
 
-        {/* 表单卡片 */}
-        <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 p-6 sm:p-8">
+        {/* 表单区 */}
+        <div className="p-6 sm:p-8">
           {error && (
             <div className="mb-5 p-3 bg-red-50 border border-red-100 rounded-xl flex items-start gap-2 animate-fade-in">
               <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
@@ -96,7 +98,7 @@ export default function Register({ onRegister, onSwitchToLogin, onBack }) {
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* 昵称 */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">昵称</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">昵称</label>
               <div className="relative">
                 <User className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 ${errors.name ? 'text-red-400' : 'text-slate-400'}`} />
                 <input
@@ -118,7 +120,7 @@ export default function Register({ onRegister, onSwitchToLogin, onBack }) {
 
             {/* 邮箱 */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">邮箱地址</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">邮箱地址</label>
               <div className="relative">
                 <Mail className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 ${errors.email ? 'text-red-400' : 'text-slate-400'}`} />
                 <input
@@ -140,7 +142,7 @@ export default function Register({ onRegister, onSwitchToLogin, onBack }) {
 
             {/* 学校 */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">
                 所在学校 <span className="text-slate-400 font-normal">（选填）</span>
               </label>
               <div className="relative">
@@ -158,7 +160,7 @@ export default function Register({ onRegister, onSwitchToLogin, onBack }) {
 
             {/* 密码 */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">设置密码</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">设置密码</label>
               <div className="relative">
                 <Lock className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 ${errors.password ? 'text-red-400' : 'text-slate-400'}`} />
                 <input
@@ -187,7 +189,7 @@ export default function Register({ onRegister, onSwitchToLogin, onBack }) {
 
             {/* 确认密码 */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">确认密码</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-1.5">确认密码</label>
               <div className="relative">
                 <Lock className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 ${errors.confirmPassword ? 'text-red-400' : 'text-slate-400'}`} />
                 <input
@@ -211,7 +213,7 @@ export default function Register({ onRegister, onSwitchToLogin, onBack }) {
             <button
               type="submit"
               disabled={loading || hasErrors}
-              className="w-full py-3.5 bg-gradient-to-r from-eco-600 to-emerald-500 hover:from-eco-700 hover:to-emerald-600 text-white font-bold rounded-xl shadow-lg shadow-eco-500/30 hover:shadow-eco-500/50 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-2"
+              className="w-full py-3 bg-gradient-to-r from-eco-600 to-emerald-500 hover:from-eco-700 hover:to-emerald-600 text-white font-bold rounded-xl shadow-lg shadow-eco-500/30 hover:shadow-eco-500/50 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {loading ? (
                 <>
@@ -232,19 +234,21 @@ export default function Register({ onRegister, onSwitchToLogin, onBack }) {
             已有账号？{' '}
             <button
               onClick={onSwitchToLogin}
-              className="text-eco-600 font-semibold hover:text-eco-700 transition-colors"
+              className="text-eco-600 font-bold hover:text-eco-700 transition-colors"
             >
               返回登录 →
             </button>
           </p>
         </div>
 
-        {/* 服务条款提示 */}
-        <div className="mt-6 p-4 bg-white/60 backdrop-blur rounded-2xl border border-eco-100">
-          <p className="text-xs text-slate-600 text-center leading-relaxed">
-            <CheckCircle className="w-3.5 h-3.5 text-eco-600 inline -mt-0.5 mr-1" />
-            注册即表示您同意 <span className="text-slate-700 font-medium">校园智转服务条款</span> 与 <span className="text-slate-700 font-medium">隐私政策</span>
-          </p>
+        {/* 提示条 */}
+        <div className="px-6 pb-6">
+          <div className="p-3 bg-eco-50 border border-eco-100 rounded-xl">
+            <p className="text-xs text-slate-600 text-center leading-relaxed">
+              <CheckCircle className="w-3.5 h-3.5 text-eco-600 inline -mt-0.5 mr-1" />
+              注册即表示您同意 <span className="text-slate-700 font-medium">校园智转服务条款</span> 与 <span className="text-slate-700 font-medium">隐私政策</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
