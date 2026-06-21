@@ -16,6 +16,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import productsData from './data/products.json';
 import messagesData from './data/messages.json';
+import usersData from './data/users.json';
 import localStore from './store/localStore';
 
 function App() {
@@ -102,6 +103,23 @@ function App() {
             ...product,
             comments: [comment, ...(product.comments || [])]
           };
+        }
+        return product;
+      })
+    );
+  };
+
+  const handleSellerReply = (productId, commentId, replyText) => {
+    setProducts(prevProducts =>
+      prevProducts.map(product => {
+        if (product.id === productId) {
+          const updatedComments = (product.comments || []).map(c => {
+            if (c.id === commentId) {
+              return { ...c, sellerReply: replyText };
+            }
+            return c;
+          });
+          return { ...product, comments: updatedComments };
         }
         return product;
       })
@@ -308,8 +326,32 @@ function App() {
     }
   };
 
-  const handleOpenChat = (chatId) => {
-    const chat = messagesData.chats.find(c => c.id === chatId);
+  const handleOpenChat = (chatIdOrOptions) => {
+    let chat;
+    if (typeof chatIdOrOptions === 'string') {
+      chat = messagesData.chats.find(c => c.id === chatIdOrOptions);
+    } else {
+      const { product, seller } = chatIdOrOptions;
+      chat = messagesData.chats.find(c => c.userId === seller?.id);
+      if (!chat && seller) {
+        const sellerInfo = messagesData.chats.find(() => false) || {};
+        chat = {
+          id: `chat:dynamic_${Date.now()}`,
+          userId: seller.id,
+          name: seller.name || '卖家同学',
+          avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${seller.id}`,
+          school: seller.school || user?.school || '校园',
+          lastMessage: '',
+          time: '刚刚',
+          unread: false,
+          product: product?.title,
+          productId: product?.id,
+          productImage: product?.image,
+          productPrice: product?.price,
+          messages: []
+        };
+      }
+    }
     if (chat) {
       setSelectedChat(chat);
     }
@@ -540,30 +582,40 @@ function App() {
         </div>
       </footer>
 
-      {selectedProduct && (
-        <ProductDetail
-          product={products.find(p => p.id === selectedProduct.id) || selectedProduct}
-          user={user}
-          seller={{
-            id: selectedProduct.sellerId || 'u1',
-            name: selectedProduct.sellerId === 'u1' ? '张同学' : (selectedProduct.sellerId === 'u2' ? '李同学' : '王同学'),
-            school: selectedProduct.location || user?.school || '浙江大学',
-            creditScore: 88 + Math.floor(Math.random() * 10),
-            tradeCount: 3 + Math.floor(Math.random() * 8)
-          }}
-          relatedProducts={products.filter(p =>
-            p.id !== selectedProduct.id &&
-            (p.category === selectedProduct.category || p.sellerId === selectedProduct.sellerId)
-          ).slice(0, 6)}
-          onClose={() => setSelectedProduct(null)}
-          onToast={showToast}
-          onToggleLike={handleToggleLike}
-          onAddComment={handleAddComment}
-          onToggleCommentLike={handleToggleCommentLike}
-          onAddToCart={handleAddToCart}
-          onSelectProduct={handleSelectProduct}
-        />
-      )}
+      {selectedProduct && (() => {
+        const currentProduct = products.find(p => p.id === selectedProduct.id) || selectedProduct;
+        const sellerData = usersData.find(u => u.id === currentProduct.sellerId) || {
+          id: currentProduct.sellerId || 'u1',
+          name: '校园同学',
+          school: currentProduct.location || '校园',
+          creditScore: 90,
+          tradeCount: 10,
+          avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${currentProduct.sellerId || 'u1'}`
+        };
+        return (
+          <ProductDetail
+            product={currentProduct}
+            user={user}
+            seller={sellerData}
+            relatedProducts={products.filter(p =>
+              p.id !== currentProduct.id &&
+              (p.category === currentProduct.category || p.sellerId === currentProduct.sellerId)
+            ).slice(0, 6)}
+            onClose={() => setSelectedProduct(null)}
+            onToast={showToast}
+            onToggleLike={handleToggleLike}
+            onAddComment={handleAddComment}
+            onSellerReply={handleSellerReply}
+            onToggleCommentLike={handleToggleCommentLike}
+            onAddToCart={handleAddToCart}
+            onSelectProduct={handleSelectProduct}
+            onOpenChat={() => {
+              setSelectedProduct(null);
+              setTimeout(() => handleOpenChat({ product: currentProduct, seller: sellerData }), 100);
+            }}
+          />
+        );
+      })()}
 
       {selectedChat && (
         <ChatPanel
