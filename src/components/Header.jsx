@@ -182,6 +182,12 @@ export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings,
   );
 }
 
+function totalUnreadFn(unreadNotifications, unreadChats, view) {
+  if (view === 'notifications') return unreadNotifications;
+  if (view === 'chats') return unreadChats;
+  return unreadNotifications + unreadChats;
+}
+
 function NotificationPanel({ view, setView, editMode, setEditMode, notifications, chats, selectedNotifications, selectedChats, toggleNotificationSelect, toggleChatSelect, deleteSelectedNotifications, deleteSelectedChats, deleteSingleNotification, deleteSingleChat, unreadNotifications, unreadChats, onClose, onOpenChat }) {
   return (
     <>
@@ -372,12 +378,6 @@ function NotificationPanel({ view, setView, editMode, setEditMode, notifications
       </div>
     </>
   );
-}
-
-function totalUnreadFn(unreadNotifications, unreadChats, view) {
-  if (view === 'notifications') return unreadNotifications;
-  if (view === 'chats') return unreadChats;
-  return unreadNotifications + unreadChats;
 }
 
 function UserMenu({ user, onClose, onOpenProfile, onOpenListings, onOpenFavorites, onOpenDashboard, onLogout }) {
