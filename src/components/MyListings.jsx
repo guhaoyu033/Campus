@@ -6,9 +6,7 @@ export default function MyListings({ products, user, onClose, onSelectProduct, o
 
   if (!user) return null;
 
-  const myProducts = products.filter(p =>
-    p.sellerId === user.id || p.sellerId === 'u1' || p.sellerId === 'u2' || !p.sellerId
-  );
+  const myProducts = products.filter(p => p.sellerId === user.id);
 
   const filteredProducts = myProducts.filter(p => {
     if (filter === 'all') return true;

@@ -6,6 +6,7 @@ import ProductGrid from './components/ProductGrid';
 import ProductDetail from './components/ProductDetail';
 import Dashboard from './components/Dashboard';
 import PublishModal from './components/PublishModal';
+import FloatingButton from './components/FloatingButton';
 import MyListings from './components/MyListings';
 import MyFavorites from './components/MyFavorites';
 import UserProfile from './components/UserProfile';
@@ -46,6 +47,8 @@ function App() {
   const [viewHistory, setViewHistory] = useState(() => localStore.getViewHistory());
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
+  const [dynamicChats, setDynamicChats] = useState(() => localStore.getDynamicChats());
+  const [showNotifications, setShowNotifications] = useState(false);
 
   // === localStorage 自动同步 ===
   useEffect(() => localStore.setUser(user), [user]);
@@ -54,6 +57,13 @@ function App() {
   useEffect(() => localStore.setOrders(orders), [orders]);
   useEffect(() => localStore.setAddressBook(addressBook), [addressBook]);
   useEffect(() => localStore.setViewHistory(viewHistory), [viewHistory]);
+  useEffect(() => {
+    const ids = dynamicChats.map(c => c.id);
+    const stored = localStore.getDynamicChats().map(c => c.id);
+    if (JSON.stringify(ids) !== JSON.stringify(stored)) {
+      localStore.setDynamicChats(dynamicChats);
+    }
+  }, [dynamicChats]);
 
   const filteredProducts = useMemo(() => {
     return products.filter((p) => {
@@ -329,17 +339,20 @@ function App() {
   const handleOpenChat = (chatIdOrOptions) => {
     let chat;
     if (typeof chatIdOrOptions === 'string') {
-      chat = messagesData.chats.find(c => c.id === chatIdOrOptions);
+      // 优先在动态聊天中查找（localStorage 持久化）
+      chat = dynamicChats.find(c => c.id === chatIdOrOptions);
+      if (!chat) chat = messagesData.chats.find(c => c.id === chatIdOrOptions);
     } else {
       const { product, seller } = chatIdOrOptions;
-      chat = messagesData.chats.find(c => c.userId === seller?.id);
+      // 先在动态聊天中查找（同一卖家）
+      chat = dynamicChats.find(c => c.userId === seller?.id);
+      if (!chat) chat = messagesData.chats.find(c => c.userId === seller?.id);
       if (!chat && seller) {
-        const sellerInfo = messagesData.chats.find(() => false) || {};
         chat = {
           id: `chat:dynamic_${Date.now()}`,
           userId: seller.id,
           name: seller.name || '卖家同学',
-          avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${seller.id}`,
+          avatar: seller.avatar || `https://api.dicebear.com/7.x/avataaars/svg?seed=${seller.id}`,
           school: seller.school || user?.school || '校园',
           lastMessage: '',
           time: '刚刚',
@@ -350,6 +363,11 @@ function App() {
           productPrice: product?.price,
           messages: []
         };
+        // 持久化到 localStorage
+        setDynamicChats(prev => {
+          if (prev.some(c => c.userId === seller.id)) return prev;
+          return [...prev, chat];
+        });
       }
     }
     if (chat) {
@@ -380,6 +398,9 @@ function App() {
         onLogin={handleOpenLogin}
         onLogout={handleLogout}
         onOpenChat={handleOpenChat}
+        dynamicChats={dynamicChats}
+        showNotifications={showNotifications}
+        onCloseNotifications={() => setShowNotifications(false)}
       />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
@@ -740,21 +761,39 @@ function App() {
             <span className="text-[10px] font-bold text-blue-700 bg-white/80 backdrop-blur-sm px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">我的订单</span>
           </div>
         )}
-        <div className="flex flex-col items-center gap-1 pointer-events-auto">
-          <button
-            onClick={() => {
-              if (!user) {
-                handleOpenLogin();
-                return;
-              }
-              setShowPublish(true);
-            }}
-            className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-eco-500 to-emerald-600 text-white rounded-3xl shadow-xl shadow-eco-500/40 hover:shadow-2xl hover:shadow-eco-500/50 hover:scale-110 transition-all flex items-center justify-center text-3xl sm:text-4xl font-black"
-          >
-            +
-          </button>
-          <span className="text-xs font-bold text-eco-700 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-lg shadow-sm whitespace-nowrap">发布闲置</span>
-        </div>
+        {user && (
+          <div className="flex flex-col items-center gap-1 pointer-events-auto">
+            <button
+              onClick={() => {
+                if (!user) {
+                  handleOpenLogin();
+                  return;
+                }
+                setShowNotifications(v => !v);
+              }}
+              className="relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-violet-400 to-violet-500 text-white rounded-2xl shadow-xl shadow-violet-500/40 hover:shadow-2xl hover:scale-110 transition-all flex items-center justify-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              {(messagesData.notifications.filter(n => n.unread).length + dynamicChats.filter(c => c.unread).length) > 0 && (
+                <span className="absolute -top-1 -right-1 min-w-[20px] h-[20px] bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1 shadow-sm border-2 border-white">
+                  {(messagesData.notifications.filter(n => n.unread).length + dynamicChats.filter(c => c.unread).length) > 9
+                    ? '9+'
+                    : messagesData.notifications.filter(n => n.unread).length + dynamicChats.filter(c => c.unread).length}
+                </span>
+              )}
+            </button>
+            <span className="text-[10px] font-bold text-violet-700 bg-white/80 backdrop-blur-sm px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">消息</span>
+          </div>
+        )}
+        <FloatingButton
+          onClick={() => {
+            if (!user) {
+              handleOpenLogin();
+              return;
+            }
+            setShowPublish(true);
+          }}
+        />
       </div>
 
       {showLogin && (

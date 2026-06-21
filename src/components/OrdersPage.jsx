@@ -176,7 +176,7 @@ export default function OrdersPage({ orders = [], products, onClose, onUpdateSta
                   <div className="p-4">
                     <div className="flex items-start gap-4 mb-4">
                       <div onClick={() => order.product && onSelectProduct && onSelectProduct(order.product)} className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-eco-100 to-emerald-100 flex-shrink-0 overflow-hidden cursor-pointer flex items-center justify-center text-4xl">
-                        {order.product?.image && order.product.image.startsWith('data:') ? (
+                        {order.product?.image?.startsWith('data:') ? (
                           <img src={order.product.image} alt={order.product.title} className="w-full h-full object-cover" />
                         ) : (
                           <span>{getEmoji(order.productTitle)}</span>
@@ -251,7 +251,12 @@ export default function OrdersPage({ orders = [], products, onClose, onUpdateSta
                     </div>
 
                     {(order.status === 'pending' || order.status === 'shipping') && (
-                      <button onClick={() => handleAdvance(order)} className="mt-4 w-full py-2.5 bg-gradient-to-r from-eco-500 to-emerald-600 text-white rounded-xl font-semibold text-sm shadow hover:shadow-lg hover:scale-[1.01] transition-all flex items-center justify-center gap-2">
+                      <button onClick={() => {
+                        const msg = order.status === 'pending'
+                          ? `确认与买家进行「${order.productTitle}」的交易？`
+                          : `确认已收到「${order.productTitle}」并同意完成交易？`;
+                        if (window.confirm(msg)) handleAdvance(order);
+                      }} className="mt-4 w-full py-2.5 bg-gradient-to-r from-eco-500 to-emerald-600 text-white rounded-xl font-semibold text-sm shadow hover:shadow-lg hover:scale-[1.01] transition-all flex items-center justify-center gap-2">
                         <Star className="w-4 h-4" /> {nextLabel(order.status)}
                       </button>
                     )}

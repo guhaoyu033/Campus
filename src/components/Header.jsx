@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Leaf, BarChart3, Bell, MessageSquare, Heart, Check, ShoppingBag, Package, User, GraduationCap, LogOut, MoreHorizontal, Trash2, CheckCircle, Circle, Edit3, MapPin } from 'lucide-react';
 import messagesData from '../data/messages.json';
 
-export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings, onOpenFavorites, onOpenCart, onOpenOrders, cartCount, ordersCount, user, onLogin, onLogout, onOpenChat }) {
-  const [showNotifications, setShowNotifications] = useState(false);
+export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings, onOpenFavorites, onOpenCart, onOpenOrders, cartCount, ordersCount, user, onLogin, onLogout, onOpenChat, dynamicChats = [], showNotifications: externalShowNotifications, onCloseNotifications: externalOnCloseNotifications }) {
+  const [showNotificationsInternal, setShowNotificationsInternal] = useState(false);
+  const showNotifications = externalShowNotifications !== undefined ? externalShowNotifications : showNotificationsInternal;
+  const setShowNotifications = externalOnCloseNotifications !== undefined
+    ? externalOnCloseNotifications
+    : setShowNotificationsInternal;
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [view, setView] = useState('notifications');
   const [editMode, setEditMode] = useState(false);
@@ -12,8 +16,18 @@ export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings,
   const [notifications, setNotifications] = useState(messagesData.notifications);
   const [chats, setChats] = useState(messagesData.chats);
 
+  // 合并静态聊天与动态聊天（动态聊天优先级更高，避免 ID 冲突）
+  const allChats = useMemo(() => {
+    const staticIds = new Set(messagesData.chats.map(c => c.id));
+    const merged = [...messagesData.chats];
+    dynamicChats.forEach(dc => {
+      if (!staticIds.has(dc.id)) merged.push(dc);
+    });
+    return merged;
+  }, [dynamicChats]);
+
   const unreadNotifications = notifications.filter((n) => n.unread).length;
-  const unreadChats = chats.filter((c) => c.unread).length;
+  const unreadChats = allChats.filter((c) => c.unread).length;
   const totalUnread = (user ? unreadNotifications : 0) + unreadChats;
 
   const toggleNotificationSelect = (id) => {
@@ -112,7 +126,7 @@ export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings,
                   editMode={editMode}
                   setEditMode={setEditMode}
                   notifications={notifications}
-                  chats={chats}
+                  chats={allChats}
                   selectedNotifications={selectedNotifications}
                   selectedChats={selectedChats}
                   toggleNotificationSelect={toggleNotificationSelect}

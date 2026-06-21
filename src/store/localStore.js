@@ -77,6 +77,23 @@ export default {
   },
   setViewHistory: (list) => safeSet('viewHistory', list),
 
+  // 动态创建的聊天会话（从商品详情页发起的私信）
+  getDynamicChats: () => {
+    const v = safeGet('dynamicChats');
+    return Array.isArray(v) ? v : [];
+  },
+  addDynamicChat: (chat) => {
+    const existing = localStore.getDynamicChats();
+    // 避免重复添加同一卖家
+    if (existing.some(c => c.userId === chat.userId)) return;
+    safeSet('dynamicChats', [...existing, chat]);
+  },
+  updateDynamicChat: (chatId, updates) => {
+    const existing = localStore.getDynamicChats();
+    const updated = existing.map(c => c.id === chatId ? { ...c, ...updates } : c);
+    safeSet('dynamicChats', updated);
+  },
+
   clearAll: () => {
     Object.keys(window.localStorage)
       .filter((k) => k.startsWith(PREFIX))

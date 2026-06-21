@@ -21,15 +21,26 @@ export default function CartPage({
   onOpenAddressModal
 }) {
   const [showCheckout, setShowCheckout] = useState(false);
+  const [removedCount, setRemovedCount] = useState(0);
 
   const cartItems = cart.map(item => {
     const p = products.find(x => x.id === item.productId);
     return { ...item, product: p };
   }).filter(item => item.product);
 
-  const totalQty = cartItems.reduce((sum, i) => sum + i.qty, 0);
-  const totalPrice = cartItems.reduce((sum, i) => sum + (i.product.price * i.qty), 0);
-  const totalSaved = cartItems.reduce((sum, i) => sum + (((i.product.originalPrice || i.product.price) - i.product.price) * i.qty), 0);
+  // 过滤掉已售/已下架商品
+  const validItems = cartItems.filter(item => item.product.status === 'active');
+  const invalidItems = cartItems.filter(item => item.product.status !== 'active');
+
+  // 自动移除失效商品
+  if (invalidItems.length > 0) {
+    invalidItems.forEach(item => onRemove && onRemove(item.productId));
+    setRemovedCount(invalidItems.length);
+  }
+
+  const totalQty = validItems.reduce((sum, i) => sum + i.qty, 0);
+  const totalPrice = validItems.reduce((sum, i) => sum + (i.product.price * i.qty), 0);
+  const totalSaved = validItems.reduce((sum, i) => sum + (((i.product.originalPrice || i.product.price) - i.product.price) * i.qty), 0);
 
   const hasAddresses = Array.isArray(addressBook) && addressBook.length > 0;
 
@@ -60,7 +71,7 @@ export default function CartPage({
   };
 
   const handleCheckout = () => {
-    if (cartItems.length === 0) {
+    if (validItems.length === 0) {
       onToast && onToast('购物车为空，先去挑选心仪商品吧 🛒');
       return;
     }
@@ -69,7 +80,7 @@ export default function CartPage({
       return;
     }
     const fullAddressString = buildFullAddressString(selectedAddress);
-    onCheckout(cartItems.map(i => ({ productId: i.productId, qty: i.qty })), fullAddressString);
+    onCheckout(validItems.map(i => ({ productId: i.productId, qty: i.qty })), fullAddressString);
     onClose();
   };
 
@@ -102,10 +113,10 @@ export default function CartPage({
             </button>
             <div>
               <h2 className="font-bold text-slate-900 text-lg">购物车</h2>
-              <p className="text-xs text-slate-500">{cartItems.length > 0 ? `共 ${totalQty} 件商品` : '购物车空空如也'}</p>
+              <p className="text-xs text-slate-500">{validItems.length > 0 ? `共 ${totalQty} 件商品` : '购物车空空如也'}</p>
             </div>
           </div>
-          {cartItems.length > 0 && (
+          {validItems.length > 0 && (
             <button onClick={() => {
               if (window.confirm('确认清空购物车？')) {
                 onClear();
@@ -119,7 +130,7 @@ export default function CartPage({
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 pb-40">
-        {cartItems.length === 0 ? (
+        {validItems.length === 0 ? (
           <div className="bg-white rounded-3xl border-2 border-dashed border-slate-200 py-20 text-center">
             <div className="text-7xl mb-4">🛒</div>
             <h3 className="text-xl font-bold text-slate-700 mb-2">购物车空空如也</h3>
@@ -130,7 +141,12 @@ export default function CartPage({
           </div>
         ) : (
           <div className="space-y-3">
-            {cartItems.map((item) => (
+            {removedCount > 0 && (
+              <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 text-sm text-amber-700">
+                已自动移除 {removedCount} 件失效商品（已售/已下架）
+              </div>
+            )}
+            {validItems.map((item) => (
               <div key={item.productId} className="bg-white rounded-2xl border border-slate-200 p-4 hover:shadow-md transition-all">
                 <div className="flex items-start gap-4">
                   <div onClick={() => onSelectProduct && onSelectProduct(item.product)} className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-eco-100 to-emerald-100 flex-shrink-0 overflow-hidden cursor-pointer flex items-center justify-center text-4xl">
@@ -208,7 +224,7 @@ export default function CartPage({
         )}
       </div>
 
-      {cartItems.length > 0 && (
+      {validItems.length > 0 && (
         <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-slate-200 p-4 shadow-2xl">
           <div className="max-w-5xl mx-auto">
             {!showCheckout ? (
