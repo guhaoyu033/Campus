@@ -743,63 +743,30 @@ function App() {
         />
       )}
 
-      <div className="fixed bottom-6 left-0 right-0 z-30 flex items-end justify-center sm:justify-end px-4 sm:px-6 gap-2 pointer-events-none">
+      {/* 浮动快捷按钮区：消息 + 发布 */}
+      <div className="fixed bottom-6 left-0 right-0 z-30 flex items-end justify-center sm:justify-end px-4 sm:px-6 gap-3 pointer-events-none">
+        {/* 消息按钮 — 从底部快捷打开消息面板 */}
         {user && (
-          <div className="flex flex-col items-center gap-1 pointer-events-auto">
-            <button
-              onClick={() => setShowCart(true)}
-              className="relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-amber-400 to-amber-500 text-white rounded-2xl shadow-xl shadow-amber-500/40 hover:shadow-2xl hover:scale-110 transition-all flex items-center justify-center"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-              {cart.length > 0 && (
-                <span className="absolute -top-1 -right-1 min-w-[20px] h-[20px] bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1 shadow-sm border-2 border-white">
-                  {cart.length}
-                </span>
-              )}
-            </button>
-            <span className="text-[10px] font-bold text-amber-700 bg-white/80 backdrop-blur-sm px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">购物车</span>
-          </div>
+          <button
+            onClick={() => setShowNotifications(v => !v)}
+            className="pointer-events-auto relative flex items-center gap-2 px-4 py-3 bg-white/90 backdrop-blur-md text-slate-700 rounded-2xl shadow-xl shadow-slate-500/20 hover:shadow-2xl hover:scale-105 hover:bg-white transition-all border border-white/50"
+          >
+            <div className="relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              {(() => {
+                const unread = messagesData.notifications.filter(n => n.unread).length + dynamicChats.filter(c => c.unread).length;
+                return unread > 0 ? (
+                  <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-sm">
+                    {unread > 9 ? '9+' : unread}
+                  </span>
+                ) : null;
+              })()}
+            </div>
+            <span className="text-sm font-semibold hidden sm:inline">消息</span>
+          </button>
         )}
-        {user && (
-          <div className="flex flex-col items-center gap-1 pointer-events-auto">
-            <button
-              onClick={() => setShowOrders(true)}
-              className="relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-400 to-blue-500 text-white rounded-2xl shadow-xl shadow-blue-500/40 hover:shadow-2xl hover:scale-110 transition-all flex items-center justify-center"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="9" y1="22" x2="9" y2="12"/><line x1="15" y1="22" x2="15" y2="12"/><line x1="1" y1="2" x2="23" y2="2"/><line x1="5" y1="2" x2="5" y2="6"/><line x1="19" y1="2" x2="19" y2="6"/><path d="M2 6h20v10H2z"/></svg>
-              {orders.length > 0 && (
-                <span className="absolute -top-1 -right-1 min-w-[20px] h-[20px] bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1 shadow-sm border-2 border-white">
-                  {orders.length}
-                </span>
-              )}
-            </button>
-            <span className="text-[10px] font-bold text-blue-700 bg-white/80 backdrop-blur-sm px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">我的订单</span>
-          </div>
-        )}
-        {user && (
-          <div className="flex flex-col items-center gap-1 pointer-events-auto">
-            <button
-              onClick={() => {
-                if (!user) {
-                  handleOpenLogin();
-                  return;
-                }
-                setShowNotifications(v => !v);
-              }}
-              className="relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-violet-400 to-violet-500 text-white rounded-2xl shadow-xl shadow-violet-500/40 hover:shadow-2xl hover:scale-110 transition-all flex items-center justify-center"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              {(messagesData.notifications.filter(n => n.unread).length + dynamicChats.filter(c => c.unread).length) > 0 && (
-                <span className="absolute -top-1 -right-1 min-w-[20px] h-[20px] bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1 shadow-sm border-2 border-white">
-                  {(messagesData.notifications.filter(n => n.unread).length + dynamicChats.filter(c => c.unread).length) > 9
-                    ? '9+'
-                    : messagesData.notifications.filter(n => n.unread).length + dynamicChats.filter(c => c.unread).length}
-                </span>
-              )}
-            </button>
-            <span className="text-[10px] font-bold text-violet-700 bg-white/80 backdrop-blur-sm px-2 py-0.5 rounded-lg shadow-sm whitespace-nowrap">消息</span>
-          </div>
-        )}
+
+        {/* 发布按钮 — 主按钮 */}
         <FloatingButton
           onClick={() => {
             if (!user) {

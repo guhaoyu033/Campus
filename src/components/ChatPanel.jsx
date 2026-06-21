@@ -41,8 +41,9 @@ const STICKER_PACKS = [
   }
 ];
 
-export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
-  const [messages, setMessages] = useState(chat.messages || []);
+export default function ChatPanel({ chat, onClose, products = [], onUpdateChat }) {
+  const safeChat = chat || { name: '聊天', avatar: '', school: '', messages: [] };
+  const [messages, setMessages] = useState((safeChat.messages && Array.isArray(safeChat.messages)) ? safeChat.messages : []);
   const [inputValue, setInputValue] = useState('');
   const [showEmojiPanel, setShowEmojiPanel] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(null);
@@ -55,18 +56,19 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  useEffect(() => {
-    if (onUpdateChat && messages.length > 0) {
-      const lastMsg = messages[messages.length - 1];
-      const preview = lastMsg.type === 'image' ? '🖼️ [图片]' : lastMsg.type === 'sticker' ? lastMsg.sticker : lastMsg.text;
-      onUpdateChat(chat.id, {
-        messages,
-        lastMessage: preview,
-        time: '刚刚',
-        unread: false
-      });
-    }
-  }, [messages]);
+  // 发送消息后更新持久化状态，避免初始加载就触发
+  const notifyUpdate = (newMessages) => {
+    if (!onUpdateChat) return;
+    const lastMsg = newMessages[newMessages.length - 1];
+    if (!lastMsg) return;
+    const preview = lastMsg.type === 'image' ? '🖼️ [图片]' : lastMsg.type === 'sticker' ? lastMsg.sticker : lastMsg.text;
+    onUpdateChat(safeChat.id, {
+      messages: newMessages,
+      lastMessage: preview,
+      time: '刚刚',
+      unread: false
+    });
+  };
 
   const handleSend = () => {
     if (!inputValue.trim() && !pendingImage) return;
@@ -84,7 +86,9 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
       time: '刚刚'
     };
 
-    setMessages([...messages, newMessage]);
+    const newMessages = [...messages, newMessage];
+    setMessages(newMessages);
+    notifyUpdate(newMessages);
     setInputValue('');
     setShowEmojiPanel(false);
 
@@ -100,12 +104,16 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
         '谢谢，我会尽快回复'
       ];
       const randomReply = replies[Math.floor(Math.random() * replies.length)];
-      setMessages(prev => [...prev, {
-        id: prev.length + 1,
-        sender: 'other',
-        text: randomReply,
-        time: '刚刚'
-      }]);
+      setMessages(prev => {
+        const updated = [...prev, {
+          id: prev.length + 1,
+          sender: 'other',
+          text: randomReply,
+          time: '刚刚'
+        }];
+        notifyUpdate(updated);
+        return updated;
+      });
     }, 1000 + Math.random() * 1000);
   };
 
@@ -117,7 +125,9 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
       image: imageData,
       time: '刚刚'
     };
-    setMessages([...messages, newMessage]);
+    const newMessages = [...messages, newMessage];
+    setMessages(newMessages);
+    notifyUpdate(newMessages);
     setShowEmojiPanel(false);
 
     setTimeout(() => {
@@ -128,12 +138,16 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
         '收到！👌'
       ];
       const randomReply = replies[Math.floor(Math.random() * replies.length)];
-      setMessages(prev => [...prev, {
-        id: prev.length + 1,
-        sender: 'other',
-        text: randomReply,
-        time: '刚刚'
-      }]);
+      setMessages(prev => {
+        const updated = [...prev, {
+          id: prev.length + 1,
+          sender: 'other',
+          text: randomReply,
+          time: '刚刚'
+        }];
+        notifyUpdate(updated);
+        return updated;
+      });
     }, 1200 + Math.random() * 800);
   };
 
@@ -145,7 +159,9 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
       sticker: emoji,
       time: '刚刚'
     };
-    setMessages([...messages, newMessage]);
+    const newMessages = [...messages, newMessage];
+    setMessages(newMessages);
+    notifyUpdate(newMessages);
     setShowEmojiPanel(false);
 
     setTimeout(() => {
@@ -189,7 +205,10 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
     e.target.value = '';
   };
 
-  const product = products.find(p => p.id === chat.productId);
+  const product = products.find(p => p.id === safeChat.productId);
+
+  const defaultAvatar = `https://api.dicebear.com/7.x/avataaars/svg?seed=${safeChat.id || 'default'}`;
+  const avatarUrl = safeChat.avatar && safeChat.avatar.trim() ? safeChat.avatar : defaultAvatar;
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-end sm:items-center justify-center animate-fade-in">
@@ -203,15 +222,15 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
               <ArrowLeft className="w-5 h-5 text-slate-600" />
             </button>
             <img
-              src={chat.avatar}
-              alt={chat.name}
+              src={avatarUrl}
+              alt={safeChat.name || '用户'}
               className="w-10 h-10 rounded-xl bg-eco-100"
             />
             <div>
-              <div className="font-bold text-slate-900 text-sm">{chat.name}</div>
+              <div className="font-bold text-slate-900 text-sm">{safeChat.name || '匿名用户'}</div>
               <div className="flex items-center gap-1 text-xs text-slate-500">
                 <MapPin className="w-3 h-3" />
-                <span>{chat.school}</span>
+                <span>{safeChat.school || '校园'}</span>
                 <span className="mx-1">·</span>
                 <ShieldCheck className="w-3 h-3 text-eco-600" />
                 <span className="text-eco-600">已认证</span>
@@ -246,24 +265,24 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
             <div key={msg.id} className={`flex gap-2.5 ${msg.sender === 'me' ? 'flex-row-reverse' : ''}`}>
               {msg.sender !== 'me' && (
                 <img
-                  src={chat.avatar}
-                  alt={chat.name}
+                  src={avatarUrl}
+                  alt={safeChat.name || '用户'}
                   className="w-8 h-8 rounded-lg bg-eco-100 flex-shrink-0"
                 />
               )}
               <div className={`max-w-[75%] ${msg.sender === 'me' ? 'items-end' : 'items-start'}`}>
-                {msg.type === 'image' ? (
+                {msg.type === 'image' && msg.image ? (
                   <div
                     className={`rounded-2xl overflow-hidden cursor-pointer hover:opacity-90 transition-opacity ${msg.sender === 'me' ? 'rounded-br-md' : 'rounded-bl-md'}`}
                     onClick={() => setShowImagePreview(msg.image)}
                   >
                     <img src={msg.image} alt="图片消息" className="max-w-[240px] max-h-[240px] object-cover rounded-2xl" />
                   </div>
-                ) : msg.type === 'sticker' ? (
-                  <div className={`text-5xl sm:text-6xl rounded-2xl p-2 animate-fade-in ${msg.sender === 'me' ? '' : ''}`}>
+                ) : msg.type === 'sticker' && msg.sticker ? (
+                  <div className={`text-5xl sm:text-6xl rounded-2xl p-2 animate-fade-in`}>
                     {msg.sticker}
                   </div>
-                ) : (
+                ) : msg.text ? (
                   <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
                     msg.sender === 'me'
                       ? 'bg-gradient-to-r from-eco-500 to-eco-600 text-white rounded-br-md'
@@ -271,7 +290,7 @@ export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
                   }`}>
                     {msg.text}
                   </div>
-                )}
+                ) : null}
                 <div className={`text-[10px] text-slate-400 mt-1 ${msg.sender === 'me' ? 'text-right' : ''}`}>
                   {msg.time}
                 </div>
