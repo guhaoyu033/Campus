@@ -266,7 +266,7 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
           {/* 关闭按钮 */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors z-10"
+            className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all duration-300 hover:rotate-90 z-10"
           >
             <X className="w-5 h-5 text-slate-700" />
           </button>
@@ -310,12 +310,12 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
           </div>
 
           <div className="flex gap-2 border-b border-slate-200 mb-5 overflow-x-auto">
-            <button onClick={() => setTab('desc')} className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors whitespace-nowrap ${tab === 'desc' ? 'border-eco-600 text-eco-700' : 'border-transparent text-slate-500'}`}>商品详情</button>
-            <button onClick={() => setTab('comments')} className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors whitespace-nowrap ${tab === 'comments' ? 'border-eco-600 text-eco-700' : 'border-transparent text-slate-500'}`}>
+            <button onClick={() => setTab('desc')} className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-all duration-300 whitespace-nowrap ${tab === 'desc' ? 'border-eco-600 text-eco-700 font-semibold' : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'}`}>商品详情</button>
+            <button onClick={() => setTab('comments')} className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-all duration-300 whitespace-nowrap ${tab === 'comments' ? 'border-eco-600 text-eco-700 font-semibold' : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'}`}>
               用户评论 {comments.length > 0 && <span className="text-xs ml-0.5">({comments.length})</span>}
             </button>
-            <button onClick={() => setTab('seller')} className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors whitespace-nowrap ${tab === 'seller' ? 'border-eco-600 text-eco-700' : 'border-transparent text-slate-500'}`}>卖家信息</button>
-            {relatedProducts.length > 0 && <button onClick={() => setTab('related')} className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors whitespace-nowrap ${tab === 'related' ? 'border-eco-600 text-eco-700' : 'border-transparent text-slate-500'}`}>相关推荐</button>}
+            <button onClick={() => setTab('seller')} className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-all duration-300 whitespace-nowrap ${tab === 'seller' ? 'border-eco-600 text-eco-700 font-semibold' : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'}`}>卖家信息</button>
+            {relatedProducts.length > 0 && <button onClick={() => setTab('related')} className={`px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-all duration-300 whitespace-nowrap ${tab === 'related' ? 'border-eco-600 text-eco-700 font-semibold' : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'}`}>相关推荐</button>}
           </div>
 
           {tab === 'desc' && (
@@ -538,7 +538,7 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
               e.stopPropagation();
               setPreviewImage(null);
             }}
-            className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-colors"
+            className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all duration-300 hover:rotate-90"
           >
             <X className="w-5 h-5" />
           </button>
@@ -562,7 +562,7 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
                 <CornerDownLeft className="w-5 h-5 text-amber-500" />
                 回复买家评论
               </h3>
-              <button onClick={() => setShowReplyModal(false)} className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors">
+              <button onClick={() => setShowReplyModal(false)} className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-all duration-300 hover:rotate-90">
                 <X className="w-4 h-4 text-slate-600" />
               </button>
             </div>
@@ -636,7 +636,7 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
                 <MessageSquare className="w-5 h-5 text-eco-600" />
                 发表评论
               </h3>
-              <button onClick={() => setShowCommentModal(false)} className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors">
+              <button onClick={() => setShowCommentModal(false)} className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-all duration-300 hover:rotate-90">
                 <X className="w-4 h-4 text-slate-600" />
               </button>
             </div>

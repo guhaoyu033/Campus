@@ -3,7 +3,7 @@ import { Search, X } from 'lucide-react';
 export default function SearchBar({ value, onChange, compact = false }) {
   return (
     <div className={`relative ${compact ? '' : 'max-w-2xl'}`}>
-      <div className={`flex items-center bg-white rounded-2xl shadow-lg ${compact ? 'shadow-sm' : ''} border border-white/30`}>
+      <div className={`flex items-center bg-white rounded-2xl shadow-lg ${compact ? 'shadow-sm' : ''} border-2 border-transparent focus-within:border-eco-400 focus-within:shadow-eco-200/60 ${compact ? '' : ''}`}>
         <Search className={`w-5 h-5 ml-4 ${compact ? 'text-slate-400' : 'text-eco-500'}`} />
         <input
           type="text"
@@ -15,7 +15,7 @@ export default function SearchBar({ value, onChange, compact = false }) {
         {value && (
           <button
             onClick={() => onChange('')}
-            className="p-2 mr-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-xl transition-colors"
+            className="p-2 mr-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-xl transition-all duration-200 hover:rotate-90"
           >
             <X className="w-4 h-4" />
           </button>

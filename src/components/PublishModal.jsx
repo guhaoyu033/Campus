@@ -161,7 +161,7 @@ export default function PublishModal({ onClose, onPublish }) {
           <div className="flex items-center justify-between mb-3">
             <button
               onClick={onClose}
-              className="p-2 hover:bg-slate-100 rounded-xl text-slate-500 transition-colors"
+              className="w-9 h-9 rounded-full hover:bg-slate-100 text-slate-500 flex items-center justify-center transition-all duration-300 hover:rotate-90"
             >
               <X className="w-5 h-5" />
             </button>

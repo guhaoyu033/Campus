@@ -60,7 +60,7 @@ export default function Login({ onLogin, onClose, onSwitchToRegister, onToast })
         <div className="bg-gradient-to-br from-eco-500 via-eco-500 to-emerald-500 px-6 py-8 text-white text-center relative">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-xl bg-white/20 hover:bg-white/30 text-white/90 hover:text-white transition-colors"
+            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 text-white/90 hover:text-white flex items-center justify-center transition-all duration-300 hover:rotate-90"
           >
             <X className="w-5 h-5" />
           </button>

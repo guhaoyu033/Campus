@@ -441,10 +441,10 @@ function App() {
                 <button
                   key={f.key}
                   onClick={() => setSortBy(f.key)}
-                  className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                  className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 ${
                     sortBy === f.key
-                      ? 'bg-gradient-to-r from-eco-500 to-eco-600 text-white shadow-sm'
-                      : 'bg-slate-50 text-slate-600 hover:bg-slate-100 border border-slate-200'
+                      ? 'bg-gradient-to-r from-eco-500 to-eco-600 text-white shadow-md'
+                      : 'bg-slate-50 text-slate-600 hover:bg-slate-100 hover:scale-105 border border-slate-200'
                   }`}
                 >
                   <span>{f.icon}</span>
@@ -460,7 +460,7 @@ function App() {
                   value={priceRange.min}
                   onChange={(e) => setPriceRange({ ...priceRange, min: e.target.value })}
                   placeholder="最低"
-                  className="w-20 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-700 focus:border-eco-400 focus:bg-white focus:ring-2 focus:ring-eco-100/50 outline-none transition-all"
+                  className="w-20 px-3 py-1.5 bg-slate-50 border-2 border-transparent rounded-lg text-xs text-slate-700 focus:border-eco-400 focus:bg-white focus:ring-2 focus:ring-eco-100/50 outline-none transition-all"
                 />
                 <span className="text-slate-400 text-xs">—</span>
                 <input
@@ -468,7 +468,7 @@ function App() {
                   value={priceRange.max}
                   onChange={(e) => setPriceRange({ ...priceRange, max: e.target.value })}
                   placeholder="最高"
-                  className="w-20 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-700 focus:border-eco-400 focus:bg-white focus:ring-2 focus:ring-eco-100/50 outline-none transition-all"
+                  className="w-20 px-3 py-1.5 bg-slate-50 border-2 border-transparent rounded-lg text-xs text-slate-700 focus:border-eco-400 focus:bg-white focus:ring-2 focus:ring-eco-100/50 outline-none transition-all"
                 />
               </div>
               {(priceRange.min !== '' || priceRange.max !== '') && (
@@ -821,8 +821,17 @@ function App() {
       )}
 
       {toast && (
-        <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[60] animate-slide-up">
-          <div className={`px-5 py-3 rounded-2xl shadow-2xl text-white font-medium text-sm ${toast.type === 'success' ? 'bg-gradient-to-r from-eco-500 to-eco-600' : 'bg-slate-800'}`}>
+        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-[60] animate-slide-up">
+          <div className={`px-5 py-3 rounded-2xl shadow-2xl text-white font-semibold text-sm flex items-center gap-2 ${
+            toast.type === 'success'
+              ? 'bg-gradient-to-r from-eco-600 via-eco-500 to-emerald-500 shadow-eco-500/40'
+              : toast.type === 'error'
+              ? 'bg-gradient-to-r from-rose-600 to-red-500 shadow-rose-500/40'
+              : 'bg-gradient-to-r from-slate-700 to-slate-600 shadow-slate-500/40'
+          }`}>
+            {toast.type === 'success' && <span className="text-lg">✓</span>}
+            {toast.type === 'error' && <span className="text-lg">✕</span>}
+            {toast.type === 'info' && <span className="text-lg">ℹ</span>}
             {toast.message}
           </div>
         </div>

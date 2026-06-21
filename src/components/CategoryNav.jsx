@@ -21,10 +21,10 @@ export default function CategoryNav({ active, onChange }) {
               <button
                 key={cat.id}
                 onClick={() => onChange(cat.id)}
-                className={`flex flex-col items-center gap-1.5 min-w-[72px] px-3 py-3 rounded-2xl transition-all duration-200 ${
+                className={`flex flex-col items-center gap-1.5 min-w-[72px] px-3 py-3 rounded-2xl transition-all duration-300 ${
                   isActive
-                    ? 'bg-eco-600 text-white shadow-lg shadow-eco-500/30 scale-105'
-                    : 'bg-white text-slate-700 hover:bg-eco-50 hover:text-eco-700 border border-slate-200/80 shadow-sm'
+                    ? 'bg-gradient-to-br from-eco-500 to-eco-700 text-white shadow-lg shadow-eco-500/30 scale-105'
+                    : 'bg-white text-slate-700 hover:bg-eco-50 hover:text-eco-700 hover:scale-105 border border-slate-200/80 shadow-sm'
                 }`}
               >
                 <div className={`w-8 h-8 rounded-xl flex items-center justify-center ${

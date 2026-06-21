@@ -28,10 +28,10 @@ export default function Dashboard({ onClose }) {
       onClick={handleBackdropClick}
     >
       <div
-        className="bg-gradient-to-b from-slate-50 to-white w-full sm:max-w-5xl sm:rounded-3xl rounded-t-3xl max-h-[94vh] overflow-hidden shadow-2xl animate-slide-up"
+        className="bg-gradient-to-b from-slate-50/80 to-white w-full sm:max-w-5xl sm:rounded-3xl rounded-t-3xl max-h-[94vh] overflow-hidden shadow-2xl animate-slide-up backdrop-blur-md"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="sticky top-0 z-10 flex items-center justify-between px-5 sm:px-8 py-4 bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div className="sticky top-0 z-10 flex items-center justify-between px-5 sm:px-8 py-4 bg-white/80 backdrop-blur-md border-b border-white/50">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-eco-500 to-eco-700 flex items-center justify-center shadow-lg shadow-eco-500/30">
               <Leaf className="w-5 h-5 text-white" />
@@ -43,7 +43,7 @@ export default function Dashboard({ onClose }) {
           </div>
           <button
             onClick={onClose}
-            className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors"
+            className="w-9 h-9 rounded-full bg-white/80 hover:bg-white flex items-center justify-center transition-all duration-300 hover:rotate-90 hover:shadow-md border border-white/50"
           >
             <X className="w-4 h-4 text-slate-700" />
           </button>
@@ -59,7 +59,7 @@ export default function Dashboard({ onClose }) {
                 <Sparkles className="w-4 h-4" /> 基于用户行为大数据的智能匹配
               </div>
               <div className="flex items-baseline gap-3 mb-4">
-                <span className="text-5xl sm:text-7xl font-black tracking-tight drop-shadow-sm">
+                <span className="text-5xl sm:text-7xl font-black tracking-tight drop-shadow-sm bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
                   {stats.carbonStats.totalReduced.toLocaleString()}
                 </span>
                 <span className="text-2xl font-semibold text-white/80">{stats.carbonStats.unit}</span>
@@ -114,7 +114,7 @@ export default function Dashboard({ onClose }) {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-5 border border-slate-200/70 shadow-sm">
+            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-5 border border-white/40 shadow-md">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h3 className="font-bold text-slate-900">交易活跃时段</h3>
@@ -138,7 +138,7 @@ export default function Dashboard({ onClose }) {
 
           {/* 图表区 - 第二排 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
-            <div className="bg-white rounded-2xl p-5 border border-slate-200/70 shadow-sm">
+            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-5 border border-white/40 shadow-md">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h3 className="font-bold text-slate-900">用户画像聚类</h3>
@@ -206,7 +206,7 @@ export default function Dashboard({ onClose }) {
           </div>
 
           {/* 近期交易记录表 */}
-          <div className="bg-white rounded-2xl p-5 border border-slate-200/70 shadow-sm mb-5">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-5 border border-white/40 shadow-md mb-5">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h3 className="font-bold text-slate-900">近期交易记录</h3>
@@ -302,7 +302,7 @@ function KpiCard({ icon, label, value, growth, color }) {
     eco: 'text-emerald-600 bg-emerald-100/70',
   };
   return (
-    <div className={`p-4 rounded-2xl bg-gradient-to-br border shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all ${colorMap[color]}`}>
+    <div className={`p-4 rounded-2xl bg-gradient-to-br border shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${colorMap[color]}`}>
       <div className="flex items-start justify-between mb-2">
         <div className="flex items-center gap-1.5 text-xs font-semibold opacity-80">
           {icon} {label}
