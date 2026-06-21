@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { X, Phone, User, MapPin, Map, Check, Star } from 'lucide-react';
 import { regions } from '../data/regions';
 
@@ -22,6 +22,7 @@ export default function AddressSelector({
   const [isDefault, setIsDefault] = useState(false);
 
   const [errors, setErrors] = useState({});
+  const contentRef = useRef(null);
 
   useEffect(() => {
     if (open) {
@@ -43,6 +44,9 @@ export default function AddressSelector({
         setIsDefault(isFirst);
       }
       setErrors({});
+      if (contentRef.current) {
+        contentRef.current.scrollTop = 0;
+      }
     }
   }, [open, initialAddress, isFirst]);
 
@@ -115,11 +119,11 @@ export default function AddressSelector({
   const inputError = 'border-red-300 bg-red-50 text-red-700';
 
   const selectBase =
-    'flex-1 px-3 py-2.5 rounded-xl text-sm font-medium border-2 transition-all outline-none bg-white appearance-none cursor-pointer';
+    'flex-1 px-3 py-2.5 rounded-xl text-sm font-medium border-2 transition-all outline-none bg-white appearance-none cursor-pointer min-h-[44px]';
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-end sm:items-center justify-center animate-fade-in">
-      <div className="bg-white w-full sm:max-w-lg sm:rounded-3xl rounded-t-3xl max-h-[92vh] overflow-hidden shadow-2xl animate-slide-up">
+      <div className="bg-white w-full sm:max-w-lg sm:rounded-3xl rounded-t-3xl max-h-[95vh] sm:max-h-[85vh] overflow-hidden shadow-2xl animate-slide-up flex flex-col">
         <div className="sticky top-0 bg-white border-b border-slate-100 px-5 py-4 z-10">
           <div className="flex items-center justify-between">
             <div className="w-9" />
@@ -136,8 +140,9 @@ export default function AddressSelector({
         </div>
 
         <div
-          className="overflow-y-auto p-5 space-y-5"
-          style={{ maxHeight: 'calc(92vh - 180px)' }}
+          ref={contentRef}
+          className="overflow-y-auto p-5 space-y-5 scroll-smooth"
+          style={{ flex: 1, maxHeight: 'calc(95vh - 200px)', WebkitOverflowScrolling: 'touch' }}
         >
           <div>
             <label className="block text-sm font-bold text-slate-800 mb-2">
@@ -180,8 +185,8 @@ export default function AddressSelector({
               <MapPin className="w-4 h-4 inline-block mr-1.5 text-eco-600" />
               所在地区 <span className="text-red-500">*</span>
             </label>
-            <div className="flex gap-2">
-              <div className="flex-1 relative">
+            <div className="flex flex-col sm:flex-row gap-2">
+              <div className="relative sm:flex-1">
                 <select
                   value={province}
                   onChange={handleProvinceChange}
@@ -196,8 +201,13 @@ export default function AddressSelector({
                     </option>
                   ))}
                 </select>
+                <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </div>
-              <div className="flex-1 relative">
+              <div className="relative sm:flex-1">
                 <select
                   value={city}
                   onChange={handleCityChange}
@@ -213,8 +223,13 @@ export default function AddressSelector({
                     </option>
                   ))}
                 </select>
+                <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </div>
-              <div className="flex-1 relative">
+              <div className="relative sm:flex-1">
                 <select
                   value={district}
                   onChange={handleDistrictChange}
@@ -230,6 +245,11 @@ export default function AddressSelector({
                     </option>
                   ))}
                 </select>
+                <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </div>
             </div>
             {(province || city || district) && (
@@ -249,7 +269,7 @@ export default function AddressSelector({
               详细地址 <span className="text-red-500">*</span>
             </label>
             <textarea
-              rows={2}
+              rows={3}
               value={detail}
               onChange={(e) => setDetail(e.target.value)}
               placeholder="街道、楼栋、门牌号等信息"
