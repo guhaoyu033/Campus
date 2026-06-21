@@ -41,8 +41,8 @@ const STICKER_PACKS = [
   }
 ];
 
-export default function ChatPanel({ chat, onClose, products }) {
-  const [messages, setMessages] = useState(chat.messages);
+export default function ChatPanel({ chat, onClose, products, onUpdateChat }) {
+  const [messages, setMessages] = useState(chat.messages || []);
   const [inputValue, setInputValue] = useState('');
   const [showEmojiPanel, setShowEmojiPanel] = useState(false);
   const [showImagePreview, setShowImagePreview] = useState(null);
@@ -53,6 +53,19 @@ export default function ChatPanel({ chat, onClose, products }) {
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  useEffect(() => {
+    if (onUpdateChat && messages.length > 0) {
+      const lastMsg = messages[messages.length - 1];
+      const preview = lastMsg.type === 'image' ? '🖼️ [图片]' : lastMsg.type === 'sticker' ? lastMsg.sticker : lastMsg.text;
+      onUpdateChat(chat.id, {
+        messages,
+        lastMessage: preview,
+        time: '刚刚',
+        unread: false
+      });
+    }
   }, [messages]);
 
   const handleSend = () => {

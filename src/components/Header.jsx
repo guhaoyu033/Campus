@@ -2,11 +2,14 @@ import { useState, useMemo } from 'react';
 import { Leaf, BarChart3, Bell, MessageSquare, Heart, Check, ShoppingBag, Package, User, GraduationCap, LogOut, MoreHorizontal, Trash2, CheckCircle, Circle, Edit3, MapPin } from 'lucide-react';
 import messagesData from '../data/messages.json';
 
-export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings, onOpenFavorites, onOpenCart, onOpenOrders, cartCount, ordersCount, user, onLogin, onLogout, onOpenChat, dynamicChats = [], showNotifications: externalShowNotifications, onCloseNotifications: externalOnCloseNotifications }) {
+export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings, onOpenFavorites, onOpenCart, onOpenOrders, cartCount, ordersCount, user, onLogin, onLogout, onOpenChat, dynamicChats = [], showNotifications: externalShowNotifications, onSetNotifications: externalSetNotifications }) {
   const [showNotificationsInternal, setShowNotificationsInternal] = useState(false);
   const showNotifications = externalShowNotifications !== undefined ? externalShowNotifications : showNotificationsInternal;
-  const setShowNotifications = externalOnCloseNotifications !== undefined
-    ? externalOnCloseNotifications
+  const setShowNotifications = externalSetNotifications !== undefined
+    ? (value) => {
+        const nextValue = typeof value === 'function' ? value(showNotifications) : value;
+        externalSetNotifications(nextValue);
+      }
     : setShowNotificationsInternal;
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [view, setView] = useState('notifications');

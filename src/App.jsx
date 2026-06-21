@@ -400,7 +400,7 @@ function App() {
         onOpenChat={handleOpenChat}
         dynamicChats={dynamicChats}
         showNotifications={showNotifications}
-        onCloseNotifications={() => setShowNotifications(false)}
+        onSetNotifications={setShowNotifications}
       />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
@@ -643,6 +643,21 @@ function App() {
           chat={selectedChat}
           onClose={() => setSelectedChat(null)}
           products={products}
+          onUpdateChat={(chatId, updates) => {
+            setDynamicChats(prev => {
+              const exists = prev.find(c => c.id === chatId);
+              if (exists) {
+                return prev.map(c => c.id === chatId ? { ...c, ...updates } : c);
+              } else {
+                const staticChat = messagesData.chats.find(c => c.id === chatId);
+                if (staticChat) {
+                  const newDynamic = { ...staticChat, ...updates };
+                  return [...prev, newDynamic];
+                }
+                return prev;
+              }
+            });
+          }}
         />
       )}
 
