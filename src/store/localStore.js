@@ -97,20 +97,28 @@ export default {
     return Array.isArray(v) ? v : [];
   },
   addDynamicChat: (chat) => {
-    const existing = localStore.getDynamicChats();
+    const existing = safeGet('dynamicChats') || [];
     // 避免重复添加同一卖家
     if (existing.some(c => c.userId === chat.userId)) return;
     safeSet('dynamicChats', [...existing, chat]);
   },
   updateDynamicChat: (chatId, updates) => {
-    const existing = localStore.getDynamicChats();
+    const existing = safeGet('dynamicChats') || [];
     const updated = existing.map(c => c.id === chatId ? { ...c, ...updates } : c);
     safeSet('dynamicChats', updated);
   },
 
   clearAll: () => {
-    Object.keys(window.localStorage)
-      .filter((k) => k.startsWith(PREFIX))
-      .forEach((k) => window.localStorage.removeItem(k));
+    if (!storageAvailable) return;
+    try {
+      const keysToRemove = [];
+      for (let i = 0; i < window.localStorage.length; i++) {
+        const key = window.localStorage.key(i);
+        if (key && key.startsWith(PREFIX)) keysToRemove.push(key);
+      }
+      keysToRemove.forEach((k) => window.localStorage.removeItem(k));
+    } catch (e) {
+      // noop
+    }
   }
 };
