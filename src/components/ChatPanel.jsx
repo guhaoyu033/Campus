@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { X, Send, ArrowLeft, MapPin, ShieldCheck, Image, Smile, MoreHorizontal, XCircle } from 'lucide-react';
 
 const EMOJI_GROUPS = [
@@ -51,31 +51,13 @@ export default function ChatPanel({ chat, onClose, products = [], onUpdateChat }
   const [pendingImage, setPendingImage] = useState(null);
   const messagesEndRef = useRef(null);
   const fileInputRef = useRef(null);
-  const isMountedRef = useRef(true);
-  const messagesRef = useRef(messages);
-
-  useEffect(() => {
-    messagesRef.current = messages;
-  }, [messages]);
-
-  useEffect(() => {
-    isMountedRef.current = true;
-    return () => {
-      isMountedRef.current = false;
-      // 组件卸载时同步最终消息到父组件（仅此一次，不在渲染时触发）
-      if (messagesRef.current.length > 0) {
-        persistMessages(messagesRef.current);
-      }
-    };
-  }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // 持久化消息到父组件（仅在组件卸载时调用，避免渲染时触发导致循环）
-  const persistMessages = (finalMessages) => {
-    if (!onUpdateChat || !isMountedRef.current) return;
+  const persistMessages = useCallback((finalMessages) => {
+    if (!onUpdateChat) return;
     const lastMsg = finalMessages[finalMessages.length - 1];
     if (!lastMsg) return;
     const preview = lastMsg.type === 'image' ? '🖼️ [图片]' : lastMsg.type === 'sticker' ? lastMsg.sticker : lastMsg.text;
@@ -85,7 +67,7 @@ export default function ChatPanel({ chat, onClose, products = [], onUpdateChat }
       time: '刚刚',
       unread: false
     });
-  };
+  }, [onUpdateChat, safeChat.id]);
 
   const handleSend = () => {
     if (!inputValue.trim() && !pendingImage) return;
@@ -105,6 +87,7 @@ export default function ChatPanel({ chat, onClose, products = [], onUpdateChat }
 
     setMessages(prev => {
       const updated = [...prev, newMessage];
+      persistMessages(updated);
       return updated;
     });
     setInputValue('');
@@ -129,6 +112,7 @@ export default function ChatPanel({ chat, onClose, products = [], onUpdateChat }
           text: randomReply,
           time: '刚刚'
         }];
+        persistMessages(updated);
         return updated;
       });
     }, 1000 + Math.random() * 1000);
@@ -144,6 +128,7 @@ export default function ChatPanel({ chat, onClose, products = [], onUpdateChat }
     };
     setMessages(prev => {
       const updated = [...prev, newMessage];
+      persistMessages(updated);
       return updated;
     });
     setShowEmojiPanel(false);
@@ -163,6 +148,7 @@ export default function ChatPanel({ chat, onClose, products = [], onUpdateChat }
           text: randomReply,
           time: '刚刚'
         }];
+        persistMessages(updated);
         return updated;
       });
     }, 1200 + Math.random() * 800);
@@ -178,6 +164,7 @@ export default function ChatPanel({ chat, onClose, products = [], onUpdateChat }
     };
     setMessages(prev => {
       const updated = [...prev, newMessage];
+      persistMessages(updated);
       return updated;
     });
     setShowEmojiPanel(false);
@@ -185,13 +172,17 @@ export default function ChatPanel({ chat, onClose, products = [], onUpdateChat }
     setTimeout(() => {
       const replyEmojis = ['👍', '😊', '😄', '👌', '🎉', '🤝'];
       const randomSticker = replyEmojis[Math.floor(Math.random() * replyEmojis.length)];
-      setMessages(prev => [...prev, {
-        id: prev.length + 1,
-        sender: 'other',
-        type: 'sticker',
-        sticker: randomSticker,
-        time: '刚刚'
-      }]);
+      setMessages(prev => {
+        const updated = [...prev, {
+          id: prev.length + 1,
+          sender: 'other',
+          type: 'sticker',
+          sticker: randomSticker,
+          time: '刚刚'
+        }];
+        persistMessages(updated);
+        return updated;
+      });
     }, 900 + Math.random() * 800);
   };
 

@@ -18,7 +18,8 @@ export default function OrdersPage({ orders = [], products, onClose, onUpdateSta
     all: ordersWithProducts.length,
     pending: ordersWithProducts.filter(o => o.status === 'pending').length,
     shipping: ordersWithProducts.filter(o => o.status === 'shipping').length,
-    completed: ordersWithProducts.filter(o => o.status === 'completed').length
+    completed: ordersWithProducts.filter(o => o.status === 'completed').length,
+    cancelled: ordersWithProducts.filter(o => o.status === 'cancelled').length
   };
 
   const statusConfig = {
@@ -140,11 +141,12 @@ export default function OrdersPage({ orders = [], products, onClose, onUpdateSta
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-6">
           <StatCard icon="📦" label="全部" value={stats.all} active={filter === 'all'} onClick={() => setFilter('all')} color="from-slate-50 to-white border-slate-200 text-slate-700" />
           <StatCard icon="⏳" label="待确认" value={stats.pending} active={filter === 'pending'} onClick={() => setFilter('pending')} color="from-amber-50 to-white border-amber-200 text-amber-700" />
           <StatCard icon="🚚" label="交易中" value={stats.shipping} active={filter === 'shipping'} onClick={() => setFilter('shipping')} color="from-blue-50 to-white border-blue-200 text-blue-700" />
           <StatCard icon="✅" label="已完成" value={stats.completed} active={filter === 'completed'} onClick={() => setFilter('completed')} color="from-emerald-50 to-white border-emerald-200 text-emerald-700" />
+          <StatCard icon="❌" label="已取消" value={stats.cancelled} active={filter === 'cancelled'} onClick={() => setFilter('cancelled')} color="from-slate-50 to-white border-slate-200 text-slate-500" />
         </div>
 
         {filteredOrders.length === 0 ? (
@@ -251,14 +253,26 @@ export default function OrdersPage({ orders = [], products, onClose, onUpdateSta
                     </div>
 
                     {(order.status === 'pending' || order.status === 'shipping') && (
-                      <button onClick={() => {
-                        const msg = order.status === 'pending'
-                          ? `确认与买家进行「${order.productTitle}」的交易？`
-                          : `确认已收到「${order.productTitle}」并同意完成交易？`;
-                        if (window.confirm(msg)) handleAdvance(order);
-                      }} className="mt-4 w-full py-2.5 bg-gradient-to-r from-eco-500 to-emerald-600 text-white rounded-xl font-semibold text-sm shadow hover:shadow-lg hover:scale-[1.01] transition-all flex items-center justify-center gap-2">
-                        <Star className="w-4 h-4" /> {nextLabel(order.status)}
-                      </button>
+                      <div className="mt-4 flex gap-2">
+                        {order.status === 'pending' && (
+                          <button onClick={() => {
+                            if (window.confirm(`确定要取消订单「${order.productTitle}」吗？取消后可重新下单。`)) {
+                              onUpdateStatus(order.id, 'cancelled');
+                              onToast && onToast('订单已取消');
+                            }
+                          }} className="flex-1 py-2.5 bg-slate-100 text-slate-600 rounded-xl font-semibold text-sm hover:bg-slate-200 transition-all flex items-center justify-center gap-2">
+                            <X className="w-4 h-4" /> 取消订单
+                          </button>
+                        )}
+                        <button onClick={() => {
+                          const msg = order.status === 'pending'
+                            ? `确认与买家进行「${order.productTitle}」的交易？`
+                            : `确认已收到「${order.productTitle}」并同意完成交易？`;
+                          if (window.confirm(msg)) handleAdvance(order);
+                        }} className={`flex-[${order.status === 'pending' ? 1 : 1}] py-2.5 bg-gradient-to-r from-eco-500 to-emerald-600 text-white rounded-xl font-semibold text-sm shadow hover:shadow-lg hover:scale-[1.01] transition-all flex items-center justify-center gap-2`}>
+                          <Star className="w-4 h-4" /> {nextLabel(order.status)}
+                        </button>
+                      </div>
                     )}
                   </div>
                 </div>

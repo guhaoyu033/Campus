@@ -1,7 +1,19 @@
 const PREFIX = 'campusflow_';
-const TTL = 7 * 24 * 60 * 60 * 1000; // 7 天
+const TTL = 90 * 24 * 60 * 60 * 1000;
+
+const storageAvailable = (() => {
+  try {
+    const test = '__storage_test__';
+    window.localStorage.setItem(test, test);
+    window.localStorage.removeItem(test);
+    return true;
+  } catch (e) {
+    return false;
+  }
+})();
 
 const safeGet = (key) => {
+  if (!storageAvailable) return null;
   try {
     const raw = window.localStorage.getItem(PREFIX + key);
     if (!raw) return null;
@@ -20,6 +32,7 @@ const safeGet = (key) => {
 };
 
 const safeSet = (key, value) => {
+  if (!storageAvailable) return;
   try {
     if (value === null || value === undefined) {
       window.localStorage.removeItem(PREFIX + key);
@@ -35,6 +48,7 @@ const safeSet = (key, value) => {
 };
 
 const safeRemove = (key) => {
+  if (!storageAvailable) return;
   try {
     window.localStorage.removeItem(PREFIX + key);
   } catch (e) {

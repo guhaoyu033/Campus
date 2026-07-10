@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, ShoppingCart, Minus, Plus, Trash2, MapPin, CheckCircle, CreditCard, Truck, Check, ChevronRight, Phone, Package, Star } from 'lucide-react';
 import AddressSelector from './AddressSelector.jsx';
 
@@ -28,15 +28,16 @@ export default function CartPage({
     return { ...item, product: p };
   }).filter(item => item.product);
 
-  // 过滤掉已售/已下架商品
   const validItems = cartItems.filter(item => item.product.status === 'active');
   const invalidItems = cartItems.filter(item => item.product.status !== 'active');
 
-  // 自动移除失效商品
-  if (invalidItems.length > 0) {
-    invalidItems.forEach(item => onRemove && onRemove(item.productId));
-    setRemovedCount(invalidItems.length);
-  }
+  useEffect(() => {
+    if (invalidItems.length > 0) {
+      invalidItems.forEach(item => onRemove && onRemove(item.productId));
+      setRemovedCount(invalidItems.length);
+      if (onToast) onToast(`已自动移除 ${invalidItems.length} 件失效商品`, 'info');
+    }
+  }, [invalidItems.map(i => i.productId).join(',')]);
 
   const totalQty = validItems.reduce((sum, i) => sum + i.qty, 0);
   const totalPrice = validItems.reduce((sum, i) => sum + (i.product.price * i.qty), 0);

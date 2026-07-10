@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react';
-import { Leaf, BarChart3, Bell, MessageSquare, Heart, Check, ShoppingBag, Package, User, GraduationCap, LogOut, MoreHorizontal, Trash2, CheckCircle, Circle, Edit3, MapPin } from 'lucide-react';
+import { Leaf, BarChart3, Bell, MessageSquare, Heart, Check, ShoppingBag, Package, User, GraduationCap, LogOut, MoreHorizontal, Trash2, CheckCircle, Circle, Edit3, MapPin, Clock } from 'lucide-react';
 import messagesData from '../data/messages.json';
 
-export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings, onOpenFavorites, onOpenCart, onOpenOrders, cartCount, ordersCount, user, onLogin, onLogout, onOpenChat, dynamicChats = [], showNotifications: externalShowNotifications, onSetNotifications: externalSetNotifications }) {
+export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings, onOpenFavorites, onOpenCart, onOpenOrders, onOpenViewHistory, cartCount, ordersCount, user, onLogin, onLogout, onOpenChat, dynamicChats = [], showNotifications: externalShowNotifications, onSetNotifications: externalSetNotifications }) {
   const [showNotificationsInternal, setShowNotificationsInternal] = useState(false);
   const showNotifications = externalShowNotifications !== undefined ? externalShowNotifications : showNotificationsInternal;
   const setShowNotifications = externalSetNotifications !== undefined
@@ -93,6 +93,9 @@ export default function Header({ onOpenDashboard, onOpenProfile, onOpenListings,
                     {cartCount}
                   </span>
                 )}
+              </button>
+              <button onClick={onOpenViewHistory} className="flex items-center gap-1.5 px-3 py-2 text-sm text-slate-600 hover:text-eco-700 hover:bg-eco-50 rounded-xl transition-colors">
+                <Clock className="w-4 h-4" /> 浏览历史
               </button>
               <button onClick={onOpenOrders} className="flex items-center gap-1.5 px-3 py-2 text-sm text-slate-600 hover:text-eco-700 hover:bg-eco-50 rounded-xl transition-colors">
                 <Package className="w-4 h-4" /> 我的订单

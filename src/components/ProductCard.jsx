@@ -1,7 +1,11 @@
 import { Heart, Eye, MapPin } from 'lucide-react';
 
 export default function ProductCard({ product, onClick, onToggleLike }) {
-  const discount = Math.round((1 - product.price / product.originalPrice) * 100);
+  const price = parseFloat(product.price) || 0;
+  const originalPrice = parseFloat(product.originalPrice) || price;
+  const discount = originalPrice > 0 && originalPrice > price
+    ? Math.round((1 - price / originalPrice) * 100)
+    : 0;
   const matchColor = product.matchScore >= 95 ? 'text-rose-600 bg-rose-50' :
                       product.matchScore >= 90 ? 'text-orange-600 bg-orange-50' :
                                                   'text-eco-700 bg-eco-50';
@@ -42,7 +46,7 @@ export default function ProductCard({ product, onClick, onToggleLike }) {
 
         {/* 省钱金额 */}
         <div className="absolute top-2.5 right-2.5 px-2 py-1 rounded-full bg-white/95 backdrop-blur-sm text-[10px] font-bold text-slate-700 shadow-sm">
-          省 ¥{product.originalPrice - product.price}
+          {originalPrice > price && `省 ¥${Math.round(originalPrice - price)}`}
         </div>
 
         {/* 折扣标签 */}
@@ -77,10 +81,10 @@ export default function ProductCard({ product, onClick, onToggleLike }) {
         {/* 价格行 - 渐变文字 */}
         <div className="flex items-baseline gap-2 mb-2">
           <span className="text-2xl font-black bg-gradient-to-r from-eco-600 to-emerald-500 bg-clip-text text-transparent leading-none">
-            ¥{product.price}
+            ¥{price}
           </span>
-          {product.originalPrice && product.originalPrice !== product.price && (
-            <span className="text-xs text-slate-400 line-through">¥{product.originalPrice}</span>
+          {originalPrice > price && (
+            <span className="text-xs text-slate-400 line-through">¥{originalPrice}</span>
           )}
         </div>
 

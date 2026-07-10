@@ -106,7 +106,7 @@ export default function Dashboard({ onClose }) {
                     <Tooltip contentStyle={{ borderRadius: 12, border: '1px solid #e2e8f0', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', fontSize: 12 }} formatter={(value) => [`${value} 笔`, '交易量']} cursor={{ fill: '#f0fdf4' }} />
                     <Bar dataKey="value" radius={[0, 8, 8, 0]} barSize={22}>
                       {stats.hotCategories.map((entry, index) => (
-                        <rect key={`bar-${index}`} fill={entry.color} />
+                        <Cell key={`cell-${index}`} fill={entry.color} />
                       ))}
                     </Bar>
                   </BarChart>

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { X, MapPin, Star, ShieldCheck, Eye, Heart, MessageCircle, ThumbsUp, Clock, Tag, ShoppingCart, Sparkles, MessageSquare, Edit3, CheckCircle, Trash2, ChevronRight, ChevronLeft, ZoomIn, CornerDownLeft } from 'lucide-react';
 
 export default function ProductDetail({ product, seller, relatedProducts = [], user, onClose, onToast, onToggleLike, onAddComment, onToggleCommentLike, onAddToCart, onSelectProduct, onOpenChat, onSellerReply }) {
@@ -63,11 +63,11 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
     setLiked(product.liked);
   }, [product.liked]);
 
-  const handleBackdropClick = (e) => {
+  const handleBackdropClick = useCallback((e) => {
     if (e.target === e.currentTarget) onClose();
-  };
+  }, [onClose]);
 
-  const handleToggleLike = () => {
+  const handleToggleLike = useCallback(() => {
     setIsAnimating(true);
     const newLiked = !liked;
     setLiked(newLiked);
@@ -78,20 +78,20 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
     } else {
       onToast && onToast('已取消收藏');
     }
-  };
+  }, [liked, product.id, onToggleLike, onToast]);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = useCallback(() => {
     onAddToCart && onAddToCart(product.id, 1);
-  };
+  }, [product.id, onAddToCart]);
 
-  const handleOpenRelated = (rp) => {
+  const handleOpenRelated = useCallback((rp) => {
     onClose && onClose();
     setTimeout(() => {
       onSelectProduct && onSelectProduct(rp);
     }, 100);
-  };
+  }, [onClose, onSelectProduct]);
 
-  const handleSubmitComment = () => {
+  const handleSubmitComment = useCallback(() => {
     if (!user) {
       onToast && onToast('请先登录后再发表评论 🔐');
       return;
@@ -119,9 +119,9 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
     setNewRating(5);
     setShowCommentModal(false);
     onToast && onToast('评论发布成功！🎉');
-  };
+  }, [user, newContent, newRating, product.id, onAddComment, onToast]);
 
-  const handleOpenReply = (commentId) => {
+  const handleOpenReply = useCallback((commentId) => {
     if (!user) {
       onToast && onToast('请先登录后再回复 🔐');
       return;
@@ -129,9 +129,9 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
     setReplyingToId(commentId);
     setReplyContent('');
     setShowReplyModal(true);
-  };
+  }, [user, onToast]);
 
-  const handleSubmitReply = () => {
+  const handleSubmitReply = useCallback(() => {
     if (!replyContent.trim()) {
       onToast && onToast('回复内容不能为空 ✍️');
       return;
@@ -145,15 +145,15 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
     setReplyingToId(null);
     setShowReplyModal(false);
     onToast && onToast('回复发布成功！🎉');
-  };
+  }, [replyContent, replyingToId, product.id, onSellerReply, onToast]);
 
-  const handleToggleCommentLike = (commentId) => {
+  const handleToggleCommentLike = useCallback((commentId) => {
     if (!user) {
       onToast && onToast('请先登录后再点赞 👍');
       return;
     }
     onToggleCommentLike && onToggleCommentLike(product.id, commentId);
-  };
+  }, [user, onToast, onToggleCommentLike, product.id]);
 
   const renderStars = (rating, size = 'w-4 h-4') => {
     return (
@@ -506,8 +506,8 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
           <button onClick={handleToggleLike} className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-2xl font-semibold text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all ${liked ? 'bg-gradient-to-br from-rose-500 to-rose-600 text-white shadow-rose-500/25' : 'bg-gradient-to-br from-slate-100 to-slate-200 text-slate-700'}`}>
             <Heart className={`w-4 h-4 ${liked ? 'fill-current' : ''}`} /> {liked ? '已收藏' : '我想要'}
           </button>
-          <button onClick={handleAddToCart} className="flex-[1.2] flex items-center justify-center gap-2 py-3 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-500 text-white font-semibold text-sm shadow-lg shadow-amber-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all">
-            <ShoppingCart className="w-4 h-4" /> 加入购物车
+          <button onClick={handleAddToCart} disabled={product.status !== 'active'} className={`flex-[1.2] flex items-center justify-center gap-2 py-3 rounded-2xl font-semibold text-sm shadow-lg transition-all ${product.status !== 'active' ? 'bg-slate-300 text-slate-500 cursor-not-allowed shadow-none' : 'bg-gradient-to-br from-amber-400 to-amber-500 text-white shadow-amber-500/30 hover:shadow-xl hover:-translate-y-0.5'}`}>
+            <ShoppingCart className="w-4 h-4" /> {product.status === 'sold' ? '已售出' : product.status === 'offline' ? '已下架' : '加入购物车'}
           </button>
           <button
             onClick={() => {
@@ -515,9 +515,14 @@ export default function ProductDetail({ product, seller, relatedProducts = [], u
                 onToast && onToast('请先登录后再私信卖家 🔐');
                 return;
               }
+              if (product.status !== 'active') {
+                onToast && onToast(product.status === 'sold' ? '该商品已售出，无法私信' : '该商品已下架');
+                return;
+              }
               onOpenChat && onOpenChat();
             }}
-            className="flex-[1.3] flex items-center justify-center gap-2 py-3 rounded-2xl bg-gradient-to-br from-eco-500 to-eco-700 text-white font-semibold text-sm shadow-lg shadow-eco-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            disabled={product.status !== 'active'}
+            className={`flex-[1.3] flex items-center justify-center gap-2 py-3 rounded-2xl font-semibold text-sm shadow-lg transition-all ${product.status !== 'active' ? 'bg-slate-300 text-slate-500 cursor-not-allowed shadow-none' : 'bg-gradient-to-br from-eco-500 to-eco-700 text-white shadow-eco-500/30 hover:shadow-xl hover:-translate-y-0.5'}`}
           >
             <MessageCircle className="w-4 h-4" /> 一键私信
           </button>

@@ -17,7 +17,7 @@ export default function Footer({ onOpenDashboard }) {
           <div className="flex items-center gap-4 text-xs text-slate-500">
             <button onClick={onOpenDashboard} className="hover:text-eco-600 transition-colors">数据看板</button>
             <span>·</span>
-            <span>2024 CampusFlow Demo</span>
+            <span>{new Date().getFullYear()} CampusFlow Demo</span>
           </div>
         </div>
       </div>

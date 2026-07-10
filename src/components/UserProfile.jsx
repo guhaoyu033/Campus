@@ -60,6 +60,15 @@ export default function UserProfile({
     }
   }, [isEditing]);
 
+  useEffect(() => {
+    const externalAddresses = Array.isArray(user?.addresses) ? user.addresses : [];
+    const internalIds = new Set(addresses.map(a => a.id));
+    const hasNew = externalAddresses.some(a => !internalIds.has(a.id));
+    if (hasNew || externalAddresses.length !== addresses.length) {
+      setAddresses(externalAddresses);
+    }
+  }, [user?.addresses?.map(a => a.id).join(',')]);
+
   if (!user) {
     return (
       <div className="fixed inset-0 z-40 bg-slate-50 overflow-y-auto animate-fade-in">

@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import CategoryNav from './components/CategoryNav';
@@ -13,21 +13,23 @@ import UserProfile from './components/UserProfile';
 import ChatPanel from './components/ChatPanel';
 import CartPage from './components/CartPage';
 import OrdersPage from './components/OrdersPage';
+import ViewHistory from './components/ViewHistory';
 import Login from './components/Login';
 import Register from './components/Register';
-import productsData from './data/products.json';
 import messagesData from './data/messages.json';
 import usersData from './data/users.json';
-import localStore from './store/localStore';
+import { useStore, useProducts, useToast, useCart, useOrders } from './hooks/useStore';
+import { useDebounce, useKeyboardShortcut } from './hooks/useUtils';
 
 function App() {
-  const [user, setUser] = useState(() => localStore.getUser());
-  const [addressBook, setAddressBook] = useState(() => localStore.getAddressBook());
+  const { user, setUser, addressBook, setAddressBook, viewHistory, setViewHistory, dynamicChats, setDynamicChats } = useStore();
+  const { products, toggleLike, addComment, sellerReply, toggleCommentLike, updateProductStatus, deleteProduct, publishProduct, incrementViews, markAsSold } = useProducts();
+  const { toast, showToast } = useToast();
+  const { cart, addToCart, updateQty, removeFromCart, clearCart, cartCount } = useCart(products, showToast);
+  const { orders, checkout, updateOrderStatus } = useOrders(products, showToast);
+
   const [selectedAddressId, setSelectedAddressId] = useState(null);
   const [showAddressModal, setShowAddressModal] = useState(false);
-  const [products, setProducts] = useState(() =>
-    localStore.getProducts(productsData.map(p => ({ ...p, status: p.status || 'active' })))
-  );
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showDashboard, setShowDashboard] = useState(false);
   const [showPublish, setShowPublish] = useState(false);
@@ -38,38 +40,20 @@ function App() {
   const [showOrders, setShowOrders] = useState(false);
   const [selectedChat, setSelectedChat] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('match');
-  const [toast, setToast] = useState(null);
   const [priceRange, setPriceRange] = useState({ min: '', max: '' });
-  const [cart, setCart] = useState(() => localStore.getCart());
-  const [orders, setOrders] = useState(() => localStore.getOrders());
-  const [viewHistory, setViewHistory] = useState(() => localStore.getViewHistory());
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
-  const [dynamicChats, setDynamicChats] = useState(() => localStore.getDynamicChats());
   const [showNotifications, setShowNotifications] = useState(false);
-
-  // === localStorage 自动同步 ===
-  useEffect(() => localStore.setUser(user), [user]);
-  useEffect(() => localStore.setProducts(products), [products]);
-  useEffect(() => localStore.setCart(cart), [cart]);
-  useEffect(() => localStore.setOrders(orders), [orders]);
-  useEffect(() => localStore.setAddressBook(addressBook), [addressBook]);
-  useEffect(() => localStore.setViewHistory(viewHistory), [viewHistory]);
-  useEffect(() => {
-    const ids = dynamicChats.map(c => c.id);
-    const stored = localStore.getDynamicChats().map(c => c.id);
-    if (JSON.stringify(ids) !== JSON.stringify(stored)) {
-      localStore.setDynamicChats(dynamicChats);
-    }
-  }, [dynamicChats]);
+  const [showViewHistory, setShowViewHistory] = useState(false);
 
   const filteredProducts = useMemo(() => {
     return products.filter((p) => {
-      const matchSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        p.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        p.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchSearch = p.title.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+        p.description.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+        p.category.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
       const matchCategory = activeCategory === 'all' || p.category === activeCategory;
       const matchPrice = (
         (priceRange.min === '' || parseFloat(p.price) >= parseFloat(priceRange.min)) &&
@@ -83,211 +67,48 @@ function App() {
       if (sortBy === 'likes') return (b.likes || 0) - (a.likes || 0);
       return (b.matchScore || 80) - (a.matchScore || 80);
     });
-  }, [products, searchTerm, activeCategory, sortBy, priceRange]);
+  }, [products, debouncedSearchTerm, activeCategory, sortBy, priceRange]);
 
-  const showToast = (message, type = 'success') => {
-    setToast({ message, type });
-    setTimeout(() => setToast(null), 2500);
-  };
-
-  const handleToggleLike = (productId) => {
-    setProducts(prevProducts =>
-      prevProducts.map(product => {
-        if (product.id === productId) {
-          return {
-            ...product,
-            liked: !product.liked,
-            likes: product.liked ? (product.likes || 0) - 1 : (product.likes || 0) + 1
-          };
-        }
-        return product;
-      })
-    );
-  };
-
-  const handleAddComment = (productId, comment) => {
-    setProducts(prevProducts =>
-      prevProducts.map(product => {
-        if (product.id === productId) {
-          return {
-            ...product,
-            comments: [comment, ...(product.comments || [])]
-          };
-        }
-        return product;
-      })
-    );
-  };
-
-  const handleSellerReply = (productId, commentId, replyText) => {
-    setProducts(prevProducts =>
-      prevProducts.map(product => {
-        if (product.id === productId) {
-          const updatedComments = (product.comments || []).map(c => {
-            if (c.id === commentId) {
-              return { ...c, sellerReply: replyText };
-            }
-            return c;
-          });
-          return { ...product, comments: updatedComments };
-        }
-        return product;
-      })
-    );
-  };
-
-  const handleToggleCommentLike = (productId, commentId) => {
-    setProducts(prevProducts =>
-      prevProducts.map(product => {
-        if (product.id === productId) {
-          const updatedComments = (product.comments || []).map(c => {
-            if (c.id === commentId) {
-              return {
-                ...c,
-                liked: !c.liked,
-                likes: c.liked ? (c.likes || 0) - 1 : (c.likes || 0) + 1
-              };
-            }
-            return c;
-          });
-          return { ...product, comments: updatedComments };
-        }
-        return product;
-      })
-    );
-  };
-
-  const handleSelectProduct = (product) => {
+  const handleSelectProduct = useCallback((product) => {
     setSelectedProduct(product);
-    setProducts(prev => prev.map(p =>
-      p.id === product.id ? { ...p, views: (p.views || 0) + 1 } : p
-    ));
+    incrementViews(product.id);
     setViewHistory(prev => {
-      const filtered = prev.filter(id => id !== product.id);
-      return [product.id, ...filtered].slice(0, 20);
+      const filtered = prev.filter(item => item.id !== product.id);
+      return [{ ...product }, ...filtered].slice(0, 20);
     });
-  };
+  }, [incrementViews, setViewHistory]);
 
-  const handleUpdateProductStatus = (productId, newStatus) => {
-    setProducts(prev => prev.map(p =>
-      p.id === productId ? { ...p, status: newStatus } : p
-    ));
-  };
+  const handleCheckout = useCallback((items, address) => {
+    const newOrders = checkout(items, address);
+    newOrders.forEach(o => markAsSold(o.productId));
+    clearCart();
+  }, [checkout, markAsSold, clearCart]);
 
-  const handleDeleteProduct = (productId) => {
-    setProducts(prev => prev.filter(p => p.id !== productId));
-  };
-
-  const handleAddToCart = (productId, qty = 1) => {
-    const product = products.find(p => p.id === productId);
-    if (!product) return;
-    setCart(prev => {
-      const existing = prev.find(i => i.productId === productId);
-      if (existing) {
-        return prev.map(i =>
-          i.productId === productId ? { ...i, qty: i.qty + qty } : i
-        );
-      }
-      return [...prev, { productId, qty, addedAt: new Date().toISOString() }];
-    });
-    showToast(`已加入购物车：${product.title} 🛒`, 'success');
-  };
-
-  const handleUpdateCartQty = (productId, qty) => {
-    if (qty <= 0) {
-      setCart(prev => prev.filter(i => i.productId !== productId));
-    } else {
-      setCart(prev => prev.map(i =>
-        i.productId === productId ? { ...i, qty } : i
-      ));
-    }
-  };
-
-  const handleRemoveFromCart = (productId) => {
-    setCart(prev => prev.filter(i => i.productId !== productId));
-  };
-
-  const handleClearCart = () => {
-    setCart([]);
-  };
-
-  const handleCheckout = (items, address) => {
-    const newOrders = items.map((item, idx) => {
-      const p = products.find(x => x.id === item.productId);
-      return {
-        id: `o${Date.now()}_${idx}`,
-        productId: item.productId,
-        productTitle: p?.title || '商品',
-        productImage: p?.image,
-        price: p?.price || 0,
-        qty: item.qty,
-        total: (p?.price || 0) * item.qty,
-        status: 'pending',
-        sellerId: p?.sellerId,
-        address: address,
-        createdAt: new Date().toISOString()
-      };
-    });
-    setOrders(prev => [...newOrders, ...prev]);
-    newOrders.forEach(o => {
-      setProducts(prev => prev.map(p =>
-        p.id === o.productId ? { ...p, status: 'sold', stock: 0 } : p
-      ));
-    });
-    setCart([]);
-    showToast(`下单成功！共 ${newOrders.length} 件商品 🎉`, 'success');
-  };
-
-  const handlePublish = (newProduct) => {
-    const product = {
-      ...newProduct,
-      id: `p${Date.now()}`,
-      price: parseFloat(newProduct.price) || 0,
-      originalPrice: newProduct.originalPrice ? parseFloat(newProduct.originalPrice) : (parseFloat(newProduct.price) * 2),
-      liked: false,
-      status: 'active',
-      matchScore: 80 + Math.floor(Math.random() * 15),
-      matchFactor: '基于新鲜度推荐',
-      sellerId: user ? user.id : 'u1',
-      location: newProduct.location || (user?.school || '我的学校'),
-      views: 0,
-      likes: 0,
-      publishedAt: new Date().toISOString().split('T')[0]
-    };
-    setProducts([product, ...products]);
+  const handlePublish = useCallback((newProduct) => {
+    publishProduct(newProduct, user);
     setShowPublish(false);
     showToast('🎉 发布成功！你的闲置商品已上架');
-  };
+  }, [publishProduct, user, showToast]);
 
-  const handleOpenLogin = () => {
-    setShowLogin(true);
-    setShowRegister(false);
-  };
-
-  const handleOpenRegister = () => {
-    setShowRegister(true);
-    setShowLogin(false);
-  };
-
-  const handleUserLogin = (userData) => {
+  const handleUserLogin = useCallback((userData) => {
     setUser(userData);
     setShowLogin(false);
     setShowRegister(false);
     setAddressBook([]);
     setSelectedAddressId(null);
     showToast(`欢迎回来，${userData.name || '同学'}！🎉`, 'success');
-  };
+  }, [setUser, setAddressBook, showToast]);
 
-  const handleLogout = () => {
+  const handleLogout = useCallback(() => {
     setUser(null);
     setAddressBook([]);
     setSelectedAddressId(null);
     setShowAddressModal(false);
     setSelectedChat(null);
     showToast('已退出登录，再见！👋');
-  };
+  }, [setUser, setAddressBook, showToast]);
 
-  const handleUpdateUser = (formData) => {
+  const handleUpdateUser = useCallback((formData) => {
     const nextUser = {
       ...user,
       name: formData.name,
@@ -306,19 +127,15 @@ function App() {
     if (Array.isArray(formData.addresses)) {
       setAddressBook(formData.addresses);
     }
-  };
+  }, [user, setUser, setAddressBook]);
 
-  const handleAddAddress = (addr) => {
+  const handleAddAddress = useCallback((addr) => {
     if (!addr) return;
     setAddressBook(prev => {
       const isFirst = prev.length === 0;
       const shouldDefault = !!addr.isDefault || isFirst;
       const id = (typeof addr.id === 'string' && addr.id.startsWith('a')) ? addr.id : `a${Date.now()}`;
-      const normalized = {
-        ...addr,
-        id,
-        isDefault: shouldDefault
-      };
+      const normalized = { ...addr, id, isDefault: shouldDefault };
       let next = [normalized, ...prev];
       if (shouldDefault) {
         next = next.map((a, i) => (i === 0 ? { ...a, isDefault: true } : { ...a, isDefault: false }));
@@ -328,23 +145,21 @@ function App() {
       }
       return next;
     });
-  };
+  }, [setAddressBook, selectedAddressId]);
 
-  const handleSaveAddressBook = (addresses) => {
+  const handleSaveAddressBook = useCallback((addresses) => {
     if (Array.isArray(addresses)) {
       setAddressBook(addresses);
     }
-  };
+  }, [setAddressBook]);
 
-  const handleOpenChat = (chatIdOrOptions) => {
+  const handleOpenChat = useCallback((chatIdOrOptions) => {
     let chat;
     if (typeof chatIdOrOptions === 'string') {
-      // 优先在动态聊天中查找（localStorage 持久化）
       chat = dynamicChats.find(c => c.id === chatIdOrOptions);
       if (!chat) chat = messagesData.chats.find(c => c.id === chatIdOrOptions);
     } else {
       const { product, seller } = chatIdOrOptions;
-      // 先在动态聊天中查找（同一卖家）
       chat = dynamicChats.find(c => c.userId === seller?.id);
       if (!chat) chat = messagesData.chats.find(c => c.userId === seller?.id);
       if (!chat && seller) {
@@ -363,7 +178,6 @@ function App() {
           productPrice: product?.price,
           messages: []
         };
-        // 持久化到 localStorage
         setDynamicChats(prev => {
           if (prev.some(c => c.userId === seller.id)) return prev;
           return [...prev, chat];
@@ -373,7 +187,40 @@ function App() {
     if (chat) {
       setSelectedChat(chat);
     }
-  };
+  }, [dynamicChats, user, setDynamicChats]);
+
+  const handleUpdateChat = useCallback((chatId, updates) => {
+    setDynamicChats(prev => prev.map(c => c.id === chatId ? { ...c, ...updates } : c));
+  }, [setDynamicChats]);
+
+  useKeyboardShortcut('k', () => {
+    const searchInput = document.querySelector('input[placeholder*="搜索"]');
+    searchInput?.focus();
+  }, !showLogin && !showRegister && !selectedProduct);
+
+  useKeyboardShortcut('n', () => {
+    if (user) setShowNotifications(v => !v);
+  }, user);
+
+  useKeyboardShortcut('p', () => {
+    if (user) setShowProfile(true);
+  }, user);
+
+  useKeyboardShortcut('Escape', () => {
+    if (selectedProduct) setSelectedProduct(null);
+    else if (showNotifications) setShowNotifications(false);
+    else if (showDashboard) setShowDashboard(false);
+    else if (showPublish) setShowPublish(false);
+    else if (showMyListings) setShowMyListings(false);
+    else if (showMyFavorites) setShowMyFavorites(false);
+    else if (showProfile) setShowProfile(false);
+    else if (showCart) setShowCart(false);
+    else if (showOrders) setShowOrders(false);
+    else if (showViewHistory) setShowViewHistory(false);
+    else if (selectedChat) setSelectedChat(null);
+    else if (showLogin) setShowLogin(false);
+    else if (showRegister) setShowRegister(false);
+  });
 
   const quickFilters = [
     { key: 'match', label: '智能推荐', icon: '✨' },
@@ -392,10 +239,11 @@ function App() {
         onOpenFavorites={() => setShowMyFavorites(true)}
         onOpenCart={() => setShowCart(true)}
         onOpenOrders={() => setShowOrders(true)}
-        cartCount={cart.length}
+        onOpenViewHistory={() => setShowViewHistory(true)}
+        cartCount={cartCount}
         ordersCount={orders.length}
         user={user}
-        onLogin={handleOpenLogin}
+        onLogin={() => { setShowLogin(true); setShowRegister(false); }}
         onLogout={handleLogout}
         onOpenChat={handleOpenChat}
         dynamicChats={dynamicChats}
@@ -412,106 +260,79 @@ function App() {
             <div className="relative">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs sm:text-sm mb-4">
                 <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                校园智转 · 让闲置流动起来 · CampusFlow
+                <span>实时智能匹配中</span>
               </div>
-              <h1 className="text-3xl sm:text-5xl font-black mb-3 tracking-tight leading-tight">
-                闲置物品，<span className="text-white/90">智能流转</span>
-              </h1>
-              <p className="text-sm sm:text-base text-white/90 max-w-2xl mb-6 leading-relaxed">
-                基于用户行为大数据的校园闲置物品智能匹配平台，通过用户画像聚类与供需匹配算法，
-                让每一件闲置物品找到最合适的新主人。<span className="font-semibold">环保 · 高效 · 绿色校园</span>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-3">发现校园闲置好物</h1>
+              <p className="text-sm text-white/80 mb-6 max-w-lg">
+                基于你的浏览偏好，为你推荐最适合的校园二手商品，让闲置流转起来
               </p>
-              <SearchBar value={searchTerm} onChange={setSearchTerm} />
-              {searchTerm && (
-                <div className="mt-3 text-sm text-white/80">
-                  🔍 正在搜索「<span className="font-semibold">{searchTerm}</span>」· 找到 {filteredProducts.length} 件匹配物品
-                </div>
-              )}
+              <SearchBar value={searchTerm} onChange={setSearchTerm} products={products} />
             </div>
           </div>
-        </section>
 
-        <CategoryNav active={activeCategory} onChange={setActiveCategory} />
+          <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">筛选</span>
+              <span className="w-12 h-px bg-slate-200" />
+            </div>
+            <CategoryNav activeCategory={activeCategory} onSelect={setActiveCategory} />
+          </div>
 
-        <section className="mt-4 mb-5">
-          <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-            <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="text-xs font-bold text-slate-700 mr-1">排序：</span>
-              {quickFilters.map((f) => (
-                <button
-                  key={f.key}
-                  onClick={() => setSortBy(f.key)}
-                  className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 ${
-                    sortBy === f.key
-                      ? 'bg-gradient-to-r from-eco-500 to-eco-600 text-white shadow-md'
-                      : 'bg-slate-50 text-slate-600 hover:bg-slate-100 hover:scale-105 border border-slate-200'
-                  }`}
-                >
-                  <span>{f.icon}</span>
-                  {f.label}
-                </button>
-              ))}
-            </div>
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-xs font-bold text-slate-700">价格：</span>
-              <div className="flex items-center gap-1.5">
-                <input
-                  type="number"
-                  value={priceRange.min}
-                  onChange={(e) => setPriceRange({ ...priceRange, min: e.target.value })}
-                  placeholder="最低"
-                  className="w-20 px-3 py-1.5 bg-slate-50 border-2 border-transparent rounded-lg text-xs text-slate-700 focus:border-eco-400 focus:bg-white focus:ring-2 focus:ring-eco-100/50 outline-none transition-all"
-                />
-                <span className="text-slate-400 text-xs">—</span>
-                <input
-                  type="number"
-                  value={priceRange.max}
-                  onChange={(e) => setPriceRange({ ...priceRange, max: e.target.value })}
-                  placeholder="最高"
-                  className="w-20 px-3 py-1.5 bg-slate-50 border-2 border-transparent rounded-lg text-xs text-slate-700 focus:border-eco-400 focus:bg-white focus:ring-2 focus:ring-eco-100/50 outline-none transition-all"
-                />
-              </div>
-              {(priceRange.min !== '' || priceRange.max !== '') && (
-                <button
-                  onClick={() => setPriceRange({ min: '', max: '' })}
-                  className="px-2.5 py-1.5 bg-red-50 text-red-600 rounded-lg text-xs font-semibold hover:bg-red-100 transition-colors"
-                >
-                  清除筛选
-                </button>
-              )}
-              <div className="ml-auto flex items-center gap-1.5 text-xs text-slate-500">
-                <span className="font-bold text-eco-600">{filteredProducts.length}</span>
-                <span>件商品</span>
-              </div>
-            </div>
+          <div className="flex items-center gap-2 mt-4 overflow-x-auto pb-2 scrollbar-hide">
+            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider shrink-0">排序</span>
+            <span className="w-8 h-px bg-slate-200 shrink-0" />
+            {quickFilters.map((filter) => (
+              <button
+                key={filter.key}
+                onClick={() => setSortBy(filter.key)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
+                  sortBy === filter.key
+                    ? 'bg-gradient-to-r from-eco-500 to-eco-600 text-white shadow-lg shadow-eco-500/30'
+                    : 'bg-white text-slate-600 border border-slate-200 hover:border-eco-300 hover:text-eco-700'
+                }`}
+              >
+                <span>{filter.icon}</span>
+                <span>{filter.label}</span>
+              </button>
+            ))}
           </div>
         </section>
 
         <section className="mt-4 animate-slide-up">
-          <ProductGrid products={filteredProducts} onSelect={handleSelectProduct} onToggleLike={handleToggleLike} />
+          <ProductGrid products={filteredProducts} onSelect={handleSelectProduct} onToggleLike={toggleLike} />
 
           {filteredProducts.length === 0 && (
-            <div className="text-center py-16 bg-white rounded-3xl border-2 border-dashed border-slate-200">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-lg font-bold text-slate-700 mb-2">暂无匹配物品</h3>
-              <p className="text-sm text-slate-500 mb-5">试试其他关键词或价格范围，或者发布一件新的闲置物品</p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-                <button
-                  onClick={() => {
-                    setSearchTerm('');
-                    setActiveCategory('all');
-                    setPriceRange({ min: '', max: '' });
-                  }}
-                  className="px-4 py-2.5 bg-eco-600 text-white rounded-xl font-semibold text-sm hover:bg-eco-700 transition-all"
-                >
-                  查看全部商品
-                </button>
-                <button
-                  onClick={() => setShowPublish(true)}
-                  className="px-4 py-2.5 bg-white border-2 border-eco-300 text-eco-700 rounded-xl font-semibold text-sm hover:bg-eco-50 transition-all"
-                >
-                  + 发布闲置
-                </button>
+            <div className="space-y-6">
+              <div className="text-center py-12 bg-white rounded-3xl border-2 border-dashed border-slate-200">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-lg font-bold text-slate-700 mb-2">暂无匹配物品</h3>
+                <p className="text-sm text-slate-500 mb-5">试试其他关键词或价格范围，或者看看校园热门推荐</p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <button
+                    onClick={() => {
+                      setSearchTerm('');
+                      setActiveCategory('all');
+                      setPriceRange({ min: '', max: '' });
+                    }}
+                    className="px-4 py-2.5 bg-eco-600 text-white rounded-xl font-semibold text-sm hover:bg-eco-700 transition-all"
+                  >
+                    清除筛选
+                  </button>
+                  <button
+                    onClick={() => setShowPublish(true)}
+                    className="px-4 py-2.5 bg-white border-2 border-eco-300 text-eco-700 rounded-xl font-semibold text-sm hover:bg-eco-50 transition-all"
+                  >
+                    + 发布闲置
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="w-1 h-5 bg-gradient-to-b from-eco-500 to-eco-700 rounded-full" />
+                  <h3 className="font-bold text-slate-900">🔥 校园热门推荐</h3>
+                </div>
+                <ProductGrid products={products.filter(p => p.status === 'active').sort((a, b) => (b.likes || 0) - (a.likes || 0)).slice(0, 6)} onSelect={handleSelectProduct} onToggleLike={toggleLike} />
               </div>
             </div>
           )}
@@ -519,152 +340,85 @@ function App() {
 
         <section className="mt-10">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
-              <div className="text-3xl mb-2">🎯</div>
-              <h3 className="font-bold text-slate-900 mb-1.5">智能匹配算法</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">分析用户画像、浏览搜索收藏数据，实现供需精准匹配</p>
+            <div className="bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl p-5 border border-blue-100">
+              <div className="text-3xl mb-2">📚</div>
+              <div className="font-bold text-slate-900">教材专区</div>
+              <div className="text-xs text-slate-500 mt-1">考研、四六级、专业课本</div>
             </div>
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
-              <div className="text-3xl mb-2">📊</div>
-              <h3 className="font-bold text-slate-900 mb-1.5">数据可视化分析</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">实时展示品类热度、交易时段、用户画像聚类等关键指标</p>
+            <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-5 border border-purple-100">
+              <div className="text-3xl mb-2">💻</div>
+              <div className="font-bold text-slate-900">数码好物</div>
+              <div className="text-xs text-slate-500 mt-1">手机、电脑、配件周边</div>
             </div>
-            <div className="p-5 rounded-2xl bg-gradient-to-br from-amber-50 to-white border border-amber-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
-              <div className="text-3xl mb-2">🌱</div>
-              <h3 className="font-bold text-slate-900 mb-1.5">循环经济理念</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">盘活校园闲置物资，减少资源浪费，倡导绿色低碳生活</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mt-10">
-          <div className="bg-gradient-to-br from-eco-500 to-emerald-600 rounded-3xl p-6 sm:p-8 text-white text-center shadow-xl">
-            <div className="text-4xl mb-3">🌟</div>
-            <h2 className="text-xl sm:text-2xl font-black mb-3">有闲置，来找校园智转</h2>
-            <p className="text-sm sm:text-base text-white/80 mb-5 max-w-xl mx-auto leading-relaxed">
-              每一件闲置物品都有再次发光的机会，加入我们，让资源流动起来，为环保校园贡献一份力量
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <button
-                onClick={() => setShowPublish(true)}
-                className="px-6 py-3 bg-white text-eco-700 rounded-2xl font-bold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all"
-              >
-                🚀 立即发布闲置
-              </button>
-              <button
-                onClick={() => setShowDashboard(true)}
-                className="px-6 py-3 bg-white/20 backdrop-blur-sm text-white rounded-2xl font-bold text-sm hover:bg-white/30 transition-all"
-              >
-                📊 查看数据看板
-              </button>
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-5 border border-orange-100">
+              <div className="text-3xl mb-2">👕</div>
+              <div className="font-bold text-slate-900">服饰鞋包</div>
+              <div className="text-xs text-slate-500 mt-1">潮流穿搭、运动装备</div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="mt-16 border-t border-slate-200 bg-white/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-eco-500 to-eco-700 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">🍃</span>
-                </div>
-                <span className="font-bold text-slate-900">校园智转</span>
-              </div>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                基于用户行为大数据的校园闲置物品智能匹配流转平台，让每一件闲置物品焕发新生。
-              </p>
+      <div className="fixed bottom-6 left-0 right-0 z-30 flex items-end justify-center sm:justify-end px-4 sm:px-6 gap-3 pointer-events-none">
+        {user && (
+          <button
+            onClick={() => setShowNotifications(v => !v)}
+            className="pointer-events-auto relative flex items-center gap-2 px-4 py-3 bg-white/90 backdrop-blur-md text-slate-700 rounded-2xl shadow-xl shadow-slate-500/20 hover:shadow-2xl hover:scale-105 hover:bg-white transition-all border border-white/50"
+          >
+            <div className="relative">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              {(() => {
+                const staticUnread = messagesData.chats.filter(c => c.unread).length;
+                const dynamicUnread = dynamicChats.filter(c => c.unread).length;
+                const notificationUnread = messagesData.notifications.filter(n => n.unread).length;
+                const unread = notificationUnread + staticUnread + dynamicUnread;
+                return unread > 0 ? (
+                  <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-sm">
+                    {unread > 9 ? '9+' : unread}
+                  </span>
+                ) : null;
+              })()}
             </div>
-            <div>
-              <h4 className="font-bold text-slate-800 mb-3 text-sm">核心功能</h4>
-              <ul className="space-y-2 text-sm text-slate-500">
-                <li>智能商品推荐</li>
-                <li>用户画像聚类</li>
-                <li>数据可视化看板</li>
-                <li>信用评分体系</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-800 mb-3 text-sm">平台理念</h4>
-              <ul className="space-y-2 text-sm text-slate-500">
-                <li>🌱 环保 · 循环经济</li>
-                <li>🎯 精准 · 智能匹配</li>
-                <li>🤝 信任 · 校园社区</li>
-                <li>📊 数据 · 科学决策</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-slate-200 pt-5 text-center">
-            <p className="text-xs text-slate-500">
-              © 2024 校园智转 CampusFlow · 让闲置流动起来
-            </p>
-          </div>
-        </div>
-      </footer>
+            <span className="text-sm font-semibold hidden sm:inline">消息</span>
+          </button>
+        )}
 
-      {selectedProduct && (() => {
-        const currentProduct = products.find(p => p.id === selectedProduct.id) || selectedProduct;
-        const sellerData = usersData.find(u => u.id === currentProduct.sellerId) || {
-          id: currentProduct.sellerId || 'u1',
-          name: '校园同学',
-          school: currentProduct.location || '校园',
-          creditScore: 90,
-          tradeCount: 10,
-          avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${currentProduct.sellerId || 'u1'}`
-        };
-        return (
-          <ProductDetail
-            product={currentProduct}
-            user={user}
-            seller={sellerData}
-            relatedProducts={products.filter(p =>
-              p.id !== currentProduct.id &&
-              (p.category === currentProduct.category || p.sellerId === currentProduct.sellerId)
-            ).slice(0, 6)}
-            onClose={() => setSelectedProduct(null)}
-            onToast={showToast}
-            onToggleLike={handleToggleLike}
-            onAddComment={handleAddComment}
-            onSellerReply={handleSellerReply}
-            onToggleCommentLike={handleToggleCommentLike}
-            onAddToCart={handleAddToCart}
-            onSelectProduct={handleSelectProduct}
-            onOpenChat={() => {
-              setSelectedProduct(null);
-              setTimeout(() => handleOpenChat({ product: currentProduct, seller: sellerData }), 100);
-            }}
-          />
-        );
-      })()}
-
-      {selectedChat && (
-        <ChatPanel
-          chat={selectedChat}
-          onClose={() => setSelectedChat(null)}
-          products={products}
-          onUpdateChat={(chatId, updates) => {
-            setDynamicChats(prev => {
-              const exists = prev.find(c => c.id === chatId);
-              if (exists) {
-                return prev.map(c => c.id === chatId ? { ...c, ...updates } : c);
-              } else {
-                const staticChat = messagesData.chats.find(c => c.id === chatId);
-                if (staticChat) {
-                  const newDynamic = { ...staticChat, ...updates };
-                  return [...prev, newDynamic];
-                }
-                return prev;
-              }
-            });
+        <FloatingButton
+          onClick={() => {
+            if (!user) { setShowLogin(true); return; }
+            setShowPublish(true);
           }}
+        />
+      </div>
+
+      {selectedProduct && (
+        <ProductDetail
+          product={selectedProduct}
+          user={user}
+          onClose={() => setSelectedProduct(null)}
+          onToggleLike={toggleLike}
+          onAddToCart={addToCart}
+          onAddComment={addComment}
+          onSellerReply={sellerReply}
+          onToggleCommentLike={toggleCommentLike}
+          onOpenChat={() => {
+            const seller = usersData.find(u => u.id === selectedProduct.sellerId);
+            handleOpenChat({ product: selectedProduct, seller });
+          }}
+          onToast={showToast}
+          relatedProducts={products.filter(p => p.category === selectedProduct.category && p.id !== selectedProduct.id).slice(0, 6)}
         />
       )}
 
       {showDashboard && <Dashboard onClose={() => setShowDashboard(false)} />}
 
       {showPublish && (
-        <PublishModal onClose={() => setShowPublish(false)} onPublish={handlePublish} />
+        <PublishModal
+          user={user}
+          onClose={() => setShowPublish(false)}
+          onPublish={handlePublish}
+          onToast={showToast}
+        />
       )}
 
       {showMyListings && (
@@ -672,9 +426,9 @@ function App() {
           products={products}
           user={user}
           onClose={() => setShowMyListings(false)}
+          onUpdateStatus={updateProductStatus}
+          onDelete={deleteProduct}
           onSelectProduct={handleSelectProduct}
-          onUpdateStatus={handleUpdateProductStatus}
-          onDeleteProduct={handleDeleteProduct}
           onToast={showToast}
         />
       )}
@@ -684,9 +438,9 @@ function App() {
           products={products}
           user={user}
           onClose={() => setShowMyFavorites(false)}
-          onToggleLike={handleToggleLike}
+          onToggleLike={toggleLike}
           onSelectProduct={handleSelectProduct}
-          onAddToCart={handleAddToCart}
+          onAddToCart={addToCart}
           onToast={showToast}
         />
       )}
@@ -699,12 +453,9 @@ function App() {
           cart={cart}
           viewHistory={viewHistory}
           onClose={() => setShowProfile(false)}
-          onLogin={handleOpenLogin}
-          onToast={showToast}
           onUpdateUser={handleUpdateUser}
           onSaveAddressBook={handleSaveAddressBook}
-          onOpenListings={() => { setShowProfile(false); setShowMyListings(true); }}
-          onOpenFavorites={() => { setShowProfile(false); setShowMyFavorites(true); }}
+          onToast={showToast}
           onOpenOrders={() => { setShowProfile(false); setShowOrders(true); }}
         />
       )}
@@ -714,9 +465,9 @@ function App() {
           cart={cart}
           products={products}
           onClose={() => setShowCart(false)}
-          onUpdateQty={handleUpdateCartQty}
-          onRemove={handleRemoveFromCart}
-          onClear={handleClearCart}
+          onUpdateQty={updateQty}
+          onRemove={removeFromCart}
+          onClear={clearCart}
           onCheckout={handleCheckout}
           onSelectProduct={handleSelectProduct}
           onToast={showToast}
@@ -730,62 +481,43 @@ function App() {
         />
       )}
 
+      {showViewHistory && (
+        <ViewHistory
+          history={viewHistory}
+          onClose={() => setShowViewHistory(false)}
+          onSelectProduct={handleSelectProduct}
+          onAddToCart={addToCart}
+          onToggleLike={toggleLike}
+          onToast={showToast}
+        />
+      )}
+
       {showOrders && (
         <OrdersPage
           orders={orders}
           products={products}
           onClose={() => setShowOrders(false)}
-          onUpdateStatus={(id, status) =>
-            setOrders(prev => prev.map(o => o.id === id ? { ...o, status } : o))
-          }
+          onUpdateStatus={updateOrderStatus}
           onToast={showToast}
           onSelectProduct={handleSelectProduct}
         />
       )}
 
-      {/* 浮动快捷按钮区：消息 + 发布 */}
-      <div className="fixed bottom-6 left-0 right-0 z-30 flex items-end justify-center sm:justify-end px-4 sm:px-6 gap-3 pointer-events-none">
-        {/* 消息按钮 — 从底部快捷打开消息面板 */}
-        {user && (
-          <button
-            onClick={() => setShowNotifications(v => !v)}
-            className="pointer-events-auto relative flex items-center gap-2 px-4 py-3 bg-white/90 backdrop-blur-md text-slate-700 rounded-2xl shadow-xl shadow-slate-500/20 hover:shadow-2xl hover:scale-105 hover:bg-white transition-all border border-white/50"
-          >
-            <div className="relative">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-              {(() => {
-                const unread = messagesData.notifications.filter(n => n.unread).length + dynamicChats.filter(c => c.unread).length;
-                return unread > 0 ? (
-                  <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-sm">
-                    {unread > 9 ? '9+' : unread}
-                  </span>
-                ) : null;
-              })()}
-            </div>
-            <span className="text-sm font-semibold hidden sm:inline">消息</span>
-          </button>
-        )}
-
-        {/* 发布按钮 — 主按钮 */}
-        <FloatingButton
-          onClick={() => {
-            if (!user) {
-              handleOpenLogin();
-              return;
-            }
-            setShowPublish(true);
-          }}
+      {selectedChat && (
+        <ChatPanel
+          chat={selectedChat}
+          user={user}
+          onClose={() => setSelectedChat(null)}
+          onUpdateChat={handleUpdateChat}
+          onToast={showToast}
         />
-      </div>
+      )}
 
       {showLogin && (
         <Login
           onLogin={handleUserLogin}
           onClose={() => setShowLogin(false)}
-          onSwitchToRegister={() => {
-            setShowLogin(false);
-            setShowRegister(true);
-          }}
+          onRegister={() => { setShowLogin(false); setShowRegister(true); }}
           onToast={showToast}
         />
       )}
@@ -815,6 +547,34 @@ function App() {
             {toast.type === 'error' && <span className="text-lg">✕</span>}
             {toast.type === 'info' && <span className="text-lg">ℹ</span>}
             {toast.message}
+          </div>
+        </div>
+      )}
+
+      {user && (
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 z-35 bg-white/95 backdrop-blur-lg border-t border-slate-200 px-2 py-2 shadow-2xl">
+          <div className="flex items-center justify-around">
+            <button onClick={() => setShowDashboard(true)} className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl hover:bg-eco-50 text-slate-600 hover:text-eco-700 transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+              <span className="text-[10px] font-semibold">数据</span>
+            </button>
+            <button onClick={() => setShowMyListings(true)} className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl hover:bg-eco-50 text-slate-600 hover:text-eco-700 transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+              <span className="text-[10px] font-semibold">发布</span>
+            </button>
+            <button onClick={() => setShowMyFavorites(true)} className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl hover:bg-eco-50 text-slate-600 hover:text-eco-700 transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+              <span className="text-[10px] font-semibold">收藏</span>
+            </button>
+            <button onClick={() => setShowCart(true)} className="relative flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl hover:bg-eco-50 text-slate-600 hover:text-eco-700 transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+              <span className="text-[10px] font-semibold">购物车</span>
+              {cartCount > 0 && <span className="absolute top-1 right-1 min-w-[16px] h-[16px] bg-red-500 text-white text-[8px] font-bold rounded-full flex items-center justify-center">{cartCount > 9 ? '9+' : cartCount}</span>}
+            </button>
+            <button onClick={() => setShowProfile(true)} className="flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl hover:bg-eco-50 text-slate-600 hover:text-eco-700 transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+              <span className="text-[10px] font-semibold">我的</span>
+            </button>
           </div>
         </div>
       )}
